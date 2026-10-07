@@ -48,7 +48,9 @@ a { color: var(--azul); }
 .calc { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 32px; padding-top: 32px; padding-bottom: 48px; scroll-margin-top: 8px; }
 .calc > section { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
 .calc h2 { margin: 0; font-size: clamp(28px, 4vw, 40px); line-height: 1.05; }
-.calc > section > p { margin: 0; font-size: 17px; color: #4a4a4a; }
+.cab, .pt, .comp { display: contents; }
+.comp[hidden] { display: none; }
+.cab p { margin: 0; font-size: 17px; color: #4a4a4a; }
 .busca { display: flex; align-items: center; gap: 10px; background: #fff; border: 2px solid var(--borda-forte); border-radius: 14px; padding: 0 16px; height: 56px; max-width: 560px; }
 .busca input { border: 0; outline: 0; flex: 1; min-width: 0; font: inherit; font-size: 17px; background: transparent; }
 .chips { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
@@ -97,20 +99,70 @@ a { color: var(--azul); }
 .painel .btn { min-height: 56px; padding: 0 12px; font-size: 18px; }
 .painel .link { color: #fff; font-weight: 700; font-size: 14px; text-align: center; padding: 8px 0; }
 
-/* Total fixo embaixo, só no celular */
-.barra-total { position: fixed; left: 0; right: 0; bottom: 0; display: flex; align-items: center; gap: 12px; background: var(--azul); color: #fff;
+/* Total fixo embaixo, só na tela de escolher do celular */
+.barra-total { position: fixed; left: 0; right: 0; bottom: 0; display: none; align-items: center; gap: 12px; background: var(--azul); color: #fff;
   padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)); border-radius: 22px 22px 0 0; }
-.barra-total[hidden] { display: none; }
 .barra-total div { flex: 1; display: flex; flex-direction: column; font-size: 13px; }
 .barra-total strong { font-family: 'Baloo 2', system-ui, sans-serif; font-size: 28px; line-height: 1.05; color: var(--amarelo); }
 .barra-total strong small { font-size: 16px; color: #fff; }
-.barra-total .btn { min-height: 52px; padding: 0 20px; font-size: 19px; }
+.barra-total .btn { min-height: 52px; padding: 0 18px; font-size: 19px; gap: 6px; }
 @media (min-width: 960px) {
   .chips { flex-wrap: wrap; overflow: visible; }
   .painel { position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; }
-  .barra-total { display: none; }
+  .so-cel { display: none; }
 }
-@media (max-width: 959px) { body:has(.barra-total:not([hidden])) { padding-bottom: 96px; } }
+
+/* Celular: uma tela por vez. Início (sem âncora) → #calculadora → #resultado; o voltar do aparelho funciona. */
+@media (max-width: 959px) {
+  .so-pc, .rodape { display: none; }
+  body:not(:has(:target)) .calc, body:has(:target) .topo { display: none; }
+  body:has(#calculadora:target) .painel, body:has(#resultado:target) .calc > section { display: none; }
+  body:has(#calculadora:target) { padding-bottom: 96px; }
+  body:has(#calculadora:target) .barra-total { display: flex; }
+
+  /* 1 · Início: ocupa a tela, botão embaixo */
+  .topo:has(.hero) { min-height: 100svh; display: flex; flex-direction: column; }
+  .hero { flex: 1; flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: 16px; padding-top: 20px; padding-bottom: 28px; }
+  .hero-texto { display: contents; }
+  .hero h1 { font-size: 44px; line-height: .98; }
+  .cartao { flex: none; margin-top: 12px; border-radius: 20px; padding: 20px; }
+  .cta { order: 1; margin-top: auto; justify-content: center; text-align: center; font-size: 14px; }
+
+  /* 2 · Escolher */
+  .calc { padding-top: 0; }
+  .cab { display: grid; grid-template-columns: 44px 1fr; align-items: center; gap: 12px 4px; margin: 0 -16px; padding: 12px 16px 16px; background: var(--vermelho); color: #fff; }
+  .cab h2 { font-size: 24px; }
+  .cab p { display: none; }
+  .cab .busca { grid-column: 1 / -1; height: 50px; border: 0; max-width: none; }
+  .voltar { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; color: #fff; }
+
+  /* 3 · Resultado */
+  .painel { background: none; color: var(--tinta); border-radius: 0; padding: 0; gap: 20px; scroll-margin-top: 0; }
+  .pt { display: flex; flex-direction: column; gap: 10px; margin: 0 -16px; padding: 12px 20px 32px; background: var(--vermelho); color: #fff; border-radius: 0 0 32px 32px; }
+  .pt-nav { display: flex; align-items: center; justify-content: space-between; }
+  .pt-nav a { display: flex; align-items: center; gap: 6px; min-height: 44px; color: #fff; font-weight: 700; font-size: 15px; text-decoration: none; }
+  .pt-nav img { width: 44px; height: 44px; object-fit: cover; object-position: top; }
+  .pt .kicker { margin-top: 12px; font-size: 22px; }
+  .painel .grande { font-size: min(76px, 19vw); }
+  .painel .sub { font-size: 20px; }
+  #r-max { font-size: 15px; }
+  #r-max b { color: var(--amarelo); }
+  .dupla div { background: #fff; border: 2px solid var(--borda); border-radius: 16px; padding: 14px; color: var(--cinza); }
+  .dupla b { font-size: 28px; }
+  .dupla div:first-child b { color: var(--vermelho-escuro); }
+  .dupla div:last-child { background: #E8F5EA; border-color: #b8dfbe; color: var(--verde); }
+  .por { border: 0; padding-top: 4px; gap: 14px; }
+  .por h3 { font: 800 22px/1.1 'Baloo 2', system-ui, sans-serif; }
+  .linha span:last-child { color: var(--vermelho-escuro); }
+  .trilho { height: 14px; border-radius: 7px; background: #f1e4d6; }
+  .trilho div { border-radius: 7px; background: var(--vermelho); }
+  .uso { color: var(--cinza); }
+  .comp { display: flex; flex-direction: column; gap: 14px; background: var(--azul); color: #fff; border-radius: 20px; padding: 20px; }
+  .comp p { font: 800 22px/1.15 'Baloo 2', system-ui, sans-serif; }
+  .borda { display: flex; align-items: center; justify-content: center; min-height: 48px; border: 2px solid #fff; border-radius: 14px; color: #fff; font-weight: 800; text-decoration: none; }
+  .nota { padding: 4px 0 16px; text-align: center; font-size: 14px; line-height: 1.5; color: #4a4a4a; }
+  .nota a { color: var(--vermelho-escuro); font-weight: 800; }
+}
 
 /* Rodapé */
 .rodape { background: var(--azul); color: #fff; }

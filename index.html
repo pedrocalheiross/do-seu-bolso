@@ -40,43 +40,57 @@
 
 <main class="wrap calc" id="calculadora">
   <section>
-    <h2>Quais remédios você usa?</h2>
-    <p>Marque os remédios e diga quanto usa. O total muda na hora.</p>
-    <label class="busca">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6b6b6b" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-      <input type="search" id="busca" placeholder="Buscar: losartana, insulina…" aria-label="Buscar remédio">
-    </label>
+    <div class="cab">
+      <a class="voltar so-cel" href="#" aria-label="Voltar"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+      <h2>Quais remédios você usa?</h2>
+      <p>Marque os remédios e diga quanto usa. O total muda na hora.</p>
+      <label class="busca">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6b6b6b" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="busca" placeholder="Buscar: losartana, insulina…" aria-label="Buscar remédio">
+      </label>
+    </div>
     <nav class="chips" id="chips" aria-label="Filtrar por doença"></nav>
     <div class="lista" id="lista">Carregando…</div>
   </section>
 
   <aside class="painel" id="resultado">
-    <p class="kicker">Sem Farmácia Popular, vai sair do seu bolso</p>
-    <div>
-      <strong class="grande" id="r-ano" aria-live="polite">R$ 0</strong>
-      <span class="sub" id="r-mes">por ano · R$ 0 por mês</span>
+    <div class="pt">
+      <div class="pt-nav so-cel">
+        <a href="#calculadora"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Editar remédios</a>
+        <img src="logo.png" alt="">
+      </div>
+      <p class="kicker">Sem Farmácia Popular, vai sair do seu bolso</p>
+      <div>
+        <strong class="grande" id="r-ano" aria-live="polite">R$ 0</strong>
+        <span class="sub" id="r-mes">por ano · R$ 0 por mês</span>
+      </div>
+      <p id="r-max" hidden></p>
     </div>
-    <p id="r-max" hidden></p>
     <div class="dupla">
       <div>Em 4 anos<b id="r-4">R$ 0</b></div>
       <div>Com a Farmácia Popular<b>R$ 0</b></div>
     </div>
     <div class="por">
-      <h3>Por remédio, por ano</h3>
+      <h3><span class="so-pc">Por remédio, por ano</span><span class="so-cel">Quanto cada um custa por ano</span></h3>
       <div id="r-por"></div>
     </div>
-    <a class="btn" id="r-share" target="_blank" rel="noopener" hidden>
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>
-      Compartilhar no WhatsApp</a>
-    <a class="link" href="termos.html">Como calculamos</a>
+    <div class="comp" id="r-comp" hidden>
+      <p class="so-cel">Mostre para quem também depende da Farmácia Popular.</p>
+      <a class="btn" id="r-share" target="_blank" rel="noopener">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>
+        Compartilhar no WhatsApp</a>
+      <a class="borda so-cel" id="r-outra" href="#calculadora">Calcular para outra pessoa</a>
+    </div>
+    <a class="link so-pc" href="termos.html">Como calculamos</a>
+    <p class="nota so-cel"><span class="fonte">Valores estimados com preços de balcão em Recife.</span> <a href="termos.html">Como calculamos e termos de uso</a></p>
   </aside>
 </main>
 
-<div class="barra-total" id="barra" hidden></div>
+<div class="barra-total" id="barra"></div>
 
 <footer class="rodape">
   <div class="wrap">
-    <div><img src="favicon.png" alt=""><span id="fonte">Preços de balcão das farmácias de Recife.</span></div>
+    <div><img src="favicon.png" alt=""><span class="fonte">Preços de balcão das farmácias de Recife.</span></div>
     <a href="termos.html">Como calculamos e termos de uso</a>
   </div>
 </footer>
@@ -173,12 +187,12 @@ function resumo() {
       <div class="linha"><span>${bonito(x.p.produto)}</span><span>${brl(x.ano)}</span></div>
       <div class="trilho"><div style="width: ${Math.max(2, x.ano / maior * 100)}%"></div></div>
       <span class="uso">${x.uso}</span></div>`).join('') : '<p>Marque um remédio para ver o cálculo.</p>';
-  $('r-share').hidden = !itens.length;
+  $('r-comp').hidden = !itens.length;
   $('r-share').href = 'https://wa.me/?text=' + encodeURIComponent(`Sem a Farmácia Popular, meus remédios custariam ${brl(ano)} por ano no balcão da farmácia. Calcule o seu: ${SITE}`);
 
-  $('barra').hidden = !itens.length;
   $('barra').innerHTML = `<div><span>Sem Farmácia Popular · ${itens.length} ${itens.length === 1 ? 'remédio' : 'remédios'}</span>
-    <strong>${brl(ano)}<small> /ano</small></strong></div><a class="btn" href="#resultado">Ver</a>`;
+    <strong>${brl(ano)}<small> /ano</small></strong></div><a class="btn" href="#resultado">Ver
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>`;
 }
 
 lista.addEventListener('click', (e) => {
@@ -223,6 +237,7 @@ $('chips').addEventListener('click', (e) => {
   render();
 });
 $('busca').addEventListener('input', render);
+$('r-outra').addEventListener('click', () => { sel = {}; render(); resumo(); });
 
 fetch('precos.json').then((r) => r.json()).then((d) => {
   produtos = d.produtos;
@@ -239,7 +254,7 @@ fetch('precos.json').then((r) => r.json()).then((d) => {
   $('ex-4').textContent = brl(exAno * 4);
   $('ex-ano').textContent = `· ${brl(exAno)} por ano`;
   $('ex-lista').innerHTML = ex.map((x) => `<div><span>${bonito(x.p.produto)}</span><b>${brl(x.ano)}/ano</b></div>`).join('');
-  $('fonte').textContent = `Preços de balcão de ${d.fontes.length} redes de Recife, atualizados em ${d.gerado_em.split('-').reverse().join('/')}.`;
+  for (const el of document.querySelectorAll('.fonte')) el.textContent =`Preços de balcão de ${d.fontes.length} redes de Recife, atualizados em ${d.gerado_em.split('-').reverse().join('/')}.`;
 
   renderChips();
   render();
