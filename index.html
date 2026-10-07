@@ -4,112 +4,247 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Do Seu Bolso — quanto a Farmácia Popular economiza para você</title>
-<style>
-  :root { --verde: #0a7a4f; --cinza: #666; --borda: #ddd; }
-  * { box-sizing: border-box; }
-  body { margin: 0; font: 16px/1.4 system-ui, sans-serif; color: #222; background: #fafafa; }
-  main { max-width: 760px; margin: 0 auto; padding: 1rem 1rem 12rem; }
-  h1 { color: var(--verde); margin-bottom: .25rem; }
-  h2 { font-size: 1rem; margin: 1.5rem 0 .5rem; color: var(--cinza); letter-spacing: .05em; }
-  input[type=search] { width: 100%; padding: .7rem; font-size: 1rem; border: 1px solid var(--borda); border-radius: 8px; }
-  .item { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; justify-content: space-between;
-          background: #fff; border: 1px solid var(--borda); border-radius: 8px; padding: .6rem .8rem; margin-bottom: .4rem; }
-  .item img { width: 56px; height: 56px; object-fit: contain; background: #fff; border-radius: 6px; }
-  .item label { flex: 1 1 18rem; cursor: pointer; }
-  .item.marcado { border-color: var(--verde); background: #f0faf5; }
-  .qtd { display: flex; gap: .3rem; align-items: center; color: var(--cinza); font-size: .9rem; }
-  .qtd input { width: 4.5rem; padding: .3rem; }
-  .sem { color: var(--cinza); font-size: .85rem; }
-  #resumo { position: fixed; left: 0; right: 0; bottom: 0; background: var(--verde); color: #fff;
-            padding: .8rem 1rem calc(.8rem + env(safe-area-inset-bottom, 0px)); }
-  #resumo > div { max-width: 760px; margin: 0 auto; }
-  #resumo strong { font-size: 1.4rem; }
-  #resumo small { opacity: .85; }
-  #detalhe { max-height: 30vh; overflow: auto; font-size: .85rem; }
-  #detalhe a { color: #fff; }
-  footer { color: var(--cinza); font-size: .85rem; margin-top: 2rem; }
-</style>
+<meta name="description" content="Sem Farmácia Popular, quanto vai sair do seu bolso? Marque seus remédios e veja quanto pagaria no balcão da farmácia.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700;6..12,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-<main>
-  <h1>Do Seu Bolso</h1>
-  <p>Marque os remédios que você retira na <b>Farmácia Popular</b> e veja quanto pagaria por eles numa farmácia comum.</p>
-  <input type="search" id="busca" placeholder="Buscar remédio (ex.: losartana)" aria-label="Buscar remédio">
-  <div id="lista">Carregando…</div>
-  <footer id="fonte"></footer>
+<header class="topo">
+  <div class="wrap barra">
+    <a class="marca" href="./"><img src="logo.png" alt="">DO SEU BOLSO</a>
+    <nav aria-label="Principal"><a href="termos.html">Como calculamos</a></nav>
+  </div>
+  <section class="wrap hero">
+    <div class="hero-texto">
+      <h1>Sem Farmácia Popular, quanto vai sair do seu bolso?</h1>
+      <p>Marque os remédios que você pega <b>de graça</b> hoje <b>com a Farmácia Popular</b>. A gente mostra quanto você pagaria no balcão da farmácia.</p>
+      <div class="cta">
+        <a class="btn" href="#calculadora">Calcular o meu gasto
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <span>Leva menos de 2 minutos. Sem cadastro.</span>
+      </div>
+    </div>
+    <div class="cartao">
+      <span class="rotulo">Exemplo real · Recife</span>
+      <span>Diabetes com problema no coração + insulina + pressão + colesterol custam, no balcão:</span>
+      <span class="grande" id="ex-4">R$ 14.471</span>
+      <span class="sub">em 4 anos <span id="ex-ano">· R$ 3.618 por ano</span></span>
+      <div class="ex-lista" id="ex-lista"></div>
+      <span class="zero"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Com a Farmácia Popular: R$ 0</span>
+    </div>
+  </section>
+</header>
+
+<main class="wrap calc" id="calculadora">
+  <section>
+    <h2>Quais remédios você usa?</h2>
+    <p>Marque os remédios e diga quanto usa. O total muda na hora.</p>
+    <label class="busca">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6b6b6b" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" id="busca" placeholder="Buscar: losartana, insulina…" aria-label="Buscar remédio">
+    </label>
+    <nav class="chips" id="chips" aria-label="Filtrar por doença"></nav>
+    <div class="lista" id="lista">Carregando…</div>
+  </section>
+
+  <aside class="painel" id="resultado">
+    <p class="kicker">Sem Farmácia Popular, vai sair do seu bolso</p>
+    <div>
+      <strong class="grande" id="r-ano" aria-live="polite">R$ 0</strong>
+      <span class="sub" id="r-mes">por ano · R$ 0 por mês</span>
+    </div>
+    <p id="r-max" hidden></p>
+    <div class="dupla">
+      <div>Em 4 anos<b id="r-4">R$ 0</b></div>
+      <div>Com a Farmácia Popular<b>R$ 0</b></div>
+    </div>
+    <div class="por">
+      <h3>Por remédio, por ano</h3>
+      <div id="r-por"></div>
+    </div>
+    <a class="btn" id="r-share" target="_blank" rel="noopener" hidden>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>
+      Compartilhar no WhatsApp</a>
+    <a class="link" href="termos.html">Como calculamos</a>
+  </aside>
 </main>
-<section id="resumo" aria-live="polite"><div>Marque um remédio para ver o cálculo.</div></section>
+
+<div class="barra-total" id="barra" hidden></div>
+
+<footer class="rodape">
+  <div class="wrap">
+    <div><img src="favicon.png" alt=""><span id="fonte">Preços de balcão das farmácias de Recife.</span></div>
+    <a href="termos.html">Como calculamos e termos de uso</a>
+  </div>
+</footer>
 
 <script>
-const brl = (v) => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-const DIAS_MES = 30;
+const brl = (v, centavos) => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: centavos ? 2 : 0, maximumFractionDigits: centavos ? 2 : 0 });
+// Quantas vezes por mês cada frequência acontece (mês = 30 dias).
+const VEZES_MES = { dia: 30, semana: 30 / 7, mes: 1, tri: 1 / 3 };
+const ROTULO = { dia: 'por dia', semana: 'por semana', mes: 'por mês', tri: 'a cada 3 meses' };
+const OPCOES = { dose: ['dia', 'semana', 'mes'], caixa: ['mes', 'tri'] };
+const PADRAO = { 'ALENDRONATO DE SÓDIO 70MG': 'semana', 'ACETATO DE MEDROXIPROGESTERONA 150MG': 'tri' };
+const APELIDO = { 'HIPERTENSÃO': 'Pressão alta', 'DISLIPIDEMIA': 'Colesterol', 'DIABETES MELLITUS + DOENÇA CARDIOVASCULAR': 'Diabetes + coração' };
+// Exemplo do topo: comprimidos por dia (insulina: caixas por mês).
+const EXEMPLO = { 'DAPAGLIFLOZINA 10 MG': 1, 'INSULINA HUMANA 100UI/ML': 2, 'CLORIDRATO DE METFORMINA 850MG': 2, 'SINVASTATINA 40MG': 1, 'LOSARTANA POTÁSSICA 50MG': 2 };
+const SITE = 'https://doseubolso.com.br';
+const CHECK = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+
+const $ = (id) => document.getElementById(id);
+const lista = $('lista');
+const bonito = (s) => s[0] + s.slice(1).toLowerCase().replace(/(\d)ui/g, '$1UI');
+const doenca = (i) => APELIDO[i] || bonito(i);
+const semAcento = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+const mensal = (p, campo, qtd, freq) => p[campo] * qtd * VEZES_MES[freq];
+
 let produtos = [];
+let chip = 'Todos';
 let sel = {};
 try { sel = JSON.parse(localStorage.getItem('sel')) || {}; } catch {}
 
-// Gasto mensal de um item: preço × quantidade no mês.
-function mensal(p, s, campo) {
-  const vezes = p.modo === 'dose' ? s.qtd * (s.periodo === 'semana' ? DIAS_MES / 7 : DIAS_MES) : s.qtd;
-  return p[campo] * vezes;
+function freq(p) {
+  const s = sel[p.produto] || {};
+  const v = s.per || s.periodo; // "periodo": como a versão anterior do site salvava
+  return OPCOES[p.modo].includes(v) ? v : PADRAO[p.produto] || OPCOES[p.modo][0];
+}
+
+function itemHTML(i) {
+  const p = produtos[i], s = sel[p.produto], f = freq(p);
+  const preco = p.sem_preco ? 'sem preço coletado' : brl(p.mediana, true) + (p.modo === 'dose' ? ' cada' : ' a caixa');
+  const foto = p.imagem_url ? `<img src="${p.imagem_url}" alt="" loading="lazy">` : '';
+  const ctrl = !s ? '' : `<div class="ctrl">
+      <div class="qtd-col">
+        <div class="stepper">
+          <button type="button" data-acao="menos" aria-label="Menos">−</button>
+          <input type="text" inputmode="numeric" data-acao="qtd" value="${s.qtd}" aria-label="Quantidade ${ROTULO[f]}">
+          <button type="button" data-acao="mais" aria-label="Mais">+</button>
+        </div>
+        <select data-acao="per" aria-label="Com que frequência">${OPCOES[p.modo].map((o) => `<option value="${o}"${o === f ? ' selected' : ''}>${ROTULO[o]}</option>`).join('')}</select>
+      </div>
+      <span class="mes">no balcão<br><b>${brl(mensal(p, 'mediana', s.qtd, f), true)}/mês</b></span>
+    </div>`;
+  return `<div class="item${s ? ' marcado' : ''}" data-i="${i}">
+    <button type="button" class="toggle" data-acao="toggle" aria-pressed="${!!s}"${p.sem_preco ? ' disabled' : ''}>
+      <span class="caixa" aria-hidden="true">${s ? CHECK : ''}</span>${foto}
+      <span class="txt"><b>${bonito(p.produto)}</b><small>${doenca(p.indicacao)} · ${preco}</small></span>
+    </button>${ctrl}</div>`;
 }
 
 function render() {
-  const termo = document.getElementById('busca').value.toLowerCase();
-  let html = '', grupo = '';
-  produtos.forEach((p, i) => {
-    if (termo && !p.produto.toLowerCase().includes(termo) && !p.indicacao.toLowerCase().includes(termo)) return;
-    if (p.indicacao !== grupo) html += `<h2>${grupo = p.indicacao}</h2>`;
-    const s = sel[p.produto];
-    const qtd = p.sem_preco ? '<span class="sem">sem preço coletado</span>' : p.modo === 'dose'
-      ? `<span class="qtd"><input type="number" min="0" step="any" data-i="${i}" data-k="qtd" value="${s?.qtd ?? 1}" aria-label="quantidade"> ${p.unidade} por
-           <select data-i="${i}" data-k="periodo"><option value="dia">dia</option><option value="semana" ${s?.periodo === 'semana' ? 'selected' : ''}>semana</option></select></span>`
-      : `<span class="qtd"><input type="number" min="0" step="any" data-i="${i}" data-k="qtd" value="${s?.qtd ?? 1}" aria-label="quantidade"> caixa/frasco por mês</span>`;
-    const foto = p.imagem_url ? `<img src="${p.imagem_url}" alt="">` : '';
-    html += `<div class="item ${s ? 'marcado' : ''}">${foto}
-      <label><input type="checkbox" data-i="${i}" ${s ? 'checked' : ''} ${p.sem_preco ? 'disabled' : ''}> ${p.produto}</label>${qtd}</div>`;
-  });
-  document.getElementById('lista').innerHTML = html || '<p>Nenhum remédio encontrado.</p>';
-  resumo();
+  const termo = semAcento($('busca').value.trim());
+  const html = produtos.map((p, i) => (chip === 'Todos' || p.indicacao === chip)
+    && (!termo || semAcento(`${p.produto} ${p.indicacao} ${doenca(p.indicacao)}`).includes(termo)) ? itemHTML(i) : '').join('');
+  lista.innerHTML = html || '<p>Nenhum remédio encontrado.</p>';
+}
+
+function renderChips() {
+  $('chips').innerHTML = ['Todos', ...new Set(produtos.map((p) => p.indicacao))]
+    .map((c) => `<button type="button" data-chip="${c}" aria-pressed="${c === chip}">${c === 'Todos' ? c : doenca(c)}</button>`).join('');
+}
+
+// Redesenha um item só, sem perder o foco de quem está usando o teclado.
+function trocar(el, foco) {
+  el.insertAdjacentHTML('afterend', itemHTML(+el.dataset.i));
+  const novo = el.nextElementSibling;
+  el.remove();
+  novo.querySelector(`[data-acao="${foco}"]`)?.focus();
 }
 
 function resumo() {
   try { localStorage.setItem('sel', JSON.stringify(sel)); } catch {}
-  const itens = produtos.filter((p) => sel[p.produto] && !p.sem_preco);
-  const box = document.querySelector('#resumo > div');
-  if (!itens.length) { box.textContent = 'Marque um remédio para ver o cálculo.'; return; }
-  const total = (c) => itens.reduce((t, p) => t + mensal(p, sel[p.produto], c), 0);
-  const [min, med, max] = ['min', 'mediana', 'max'].map(total);
-  box.innerHTML = `Sem a Farmácia Popular você gastaria cerca de<br>
-    <strong>${brl(med)}/mês</strong> · <strong>${brl(med * 12)}/ano</strong><br>
-    <small>de ${brl(min)} a ${brl(max)} por mês (${brl(min * 12)} a ${brl(max * 12)} por ano), conforme marca e farmácia</small>
-    <details id="detalhe"><summary>Ver por remédio</summary>${itens.map((p) =>
-      `<div>${p.produto}: ${brl(mensal(p, sel[p.produto], 'mediana'))}/mês — mais barato:
-       <a href="${p.ofertas[0].url}" target="_blank" rel="noopener">${p.ofertas[0].nome}</a> (${p.ofertas[0].farmacia})</div>`).join('')}
-    </details>`;
+  const itens = produtos.filter((p) => sel[p.produto]).map((p) => {
+    const q = sel[p.produto].qtd, f = freq(p);
+    return { p, uso: `${q} ${ROTULO[f]}`, ano: mensal(p, 'mediana', q, f) * 12, max: mensal(p, 'max', q, f) * 12 };
+  }).sort((a, b) => b.ano - a.ano);
+  const ano = itens.reduce((t, x) => t + x.ano, 0);
+  const max = itens.reduce((t, x) => t + x.max, 0);
+  const maior = itens[0]?.ano || 1;
+
+  $('r-ano').textContent = brl(ano);
+  $('r-mes').textContent = `por ano · ${brl(ano / 12)} por mês`;
+  $('r-4').textContent = brl(ano * 4);
+  $('r-max').hidden = max <= ano;
+  $('r-max').innerHTML = `Comprando a marca mais cara, pode passar de <b>${brl(max)} por ano</b>.`;
+  $('r-por').innerHTML = itens.length ? itens.map((x) => `<div>
+      <div class="linha"><span>${bonito(x.p.produto)}</span><span>${brl(x.ano)}</span></div>
+      <div class="trilho"><div style="width: ${Math.max(2, x.ano / maior * 100)}%"></div></div>
+      <span class="uso">${x.uso}</span></div>`).join('') : '<p>Marque um remédio para ver o cálculo.</p>';
+  $('r-share').hidden = !itens.length;
+  $('r-share').href = 'https://wa.me/?text=' + encodeURIComponent(`Sem a Farmácia Popular, meus remédios custariam ${brl(ano)} por ano no balcão da farmácia. Calcule o seu: ${SITE}`);
+
+  $('barra').hidden = !itens.length;
+  $('barra').innerHTML = `<div><span>Sem Farmácia Popular · ${itens.length} ${itens.length === 1 ? 'remédio' : 'remédios'}</span>
+    <strong>${brl(ano)}<small> /ano</small></strong></div><a class="btn" href="#resultado">Ver</a>`;
 }
 
-document.getElementById('lista').addEventListener('input', (e) => {
-  const p = produtos[e.target.dataset.i];
-  if (!p) return;
-  if (e.target.type === 'checkbox') {
-    if (e.target.checked) {
-      const linha = e.target.closest('.item');
-      sel[p.produto] = { qtd: +(linha.querySelector('[data-k=qtd]')?.value || 1), periodo: linha.querySelector('select')?.value || 'dia' };
-    } else delete sel[p.produto];
-    e.target.closest('.item').classList.toggle('marcado', e.target.checked);
-  } else if (sel[p.produto]) {
-    sel[p.produto][e.target.dataset.k] = e.target.dataset.k === 'qtd' ? Math.max(0, +e.target.value || 0) : e.target.value;
+lista.addEventListener('click', (e) => {
+  const b = e.target.closest('button[data-acao]');
+  if (!b) return;
+  const el = b.closest('.item'), p = produtos[el.dataset.i], s = sel[p.produto];
+  if (b.dataset.acao === 'toggle') {
+    if (s) delete sel[p.produto]; else sel[p.produto] = { qtd: 1, per: freq(p) };
+  } else {
+    s.qtd = Math.max(0, s.qtd + (b.dataset.acao === 'mais' ? 1 : -1));
+    if (!s.qtd) delete sel[p.produto];
   }
+  trocar(el, sel[p.produto] ? b.dataset.acao : 'toggle');
   resumo();
 });
-document.getElementById('busca').addEventListener('input', render);
+
+// Digitar 0 ou apagar mantém o remédio marcado; só o − ou o toque no nome desmarca.
+lista.addEventListener('input', (e) => {
+  if (e.target.dataset.acao !== 'qtd') return;
+  const el = e.target.closest('.item'), p = produtos[el.dataset.i];
+  sel[p.produto].qtd = Math.min(999, parseInt(e.target.value.replace(/\D/g, ''), 10) || 0);
+  el.querySelector('.mes b').textContent = `${brl(mensal(p, 'mediana', sel[p.produto].qtd, freq(p)), true)}/mês`;
+  resumo();
+});
+
+lista.addEventListener('change', (e) => {
+  const el = e.target.closest('.item');
+  const p = produtos[el.dataset.i];
+  if (e.target.dataset.acao === 'qtd') e.target.value = sel[p.produto].qtd;
+  if (e.target.dataset.acao === 'per') {
+    sel[p.produto].per = e.target.value;
+    trocar(el, 'per');
+    resumo();
+  }
+});
+
+$('chips').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-chip]');
+  if (!b) return;
+  chip = b.dataset.chip;
+  renderChips();
+  render();
+});
+$('busca').addEventListener('input', render);
 
 fetch('precos.json').then((r) => r.json()).then((d) => {
   produtos = d.produtos;
-  document.getElementById('fonte').innerHTML = `Na Farmácia Popular esses itens saem por <b>R$ 0</b>.
-    Preços de balcão: ${d.fontes.map((f) => f.nota).join(' ')} Gerado em ${d.gerado_em}. Mês = ${DIAS_MES} dias.`;
+  // Descarta seleções salvas de remédios que saíram da lista ou ficaram sem preço.
+  for (const k in sel) {
+    if (!produtos.some((p) => p.produto === k && !p.sem_preco)) delete sel[k];
+    else sel[k].qtd = Math.min(999, +sel[k].qtd || 0);
+  }
+
+  const ex = produtos.filter((p) => EXEMPLO[p.produto] && !p.sem_preco)
+    .map((p) => ({ p, ano: mensal(p, 'mediana', EXEMPLO[p.produto], OPCOES[p.modo][0]) * 12 }))
+    .sort((a, b) => b.ano - a.ano);
+  const exAno = ex.reduce((t, x) => t + x.ano, 0);
+  $('ex-4').textContent = brl(exAno * 4);
+  $('ex-ano').textContent = `· ${brl(exAno)} por ano`;
+  $('ex-lista').innerHTML = ex.map((x) => `<div><span>${bonito(x.p.produto)}</span><b>${brl(x.ano)}/ano</b></div>`).join('');
+  $('fonte').textContent = `Preços de balcão de ${d.fontes.length} redes de Recife, atualizados em ${d.gerado_em.split('-').reverse().join('/')}.`;
+
+  renderChips();
   render();
-}).catch(() => { document.getElementById('lista').textContent = 'Não foi possível carregar os preços.'; });
+  resumo();
+}).catch(() => { lista.textContent = 'Não foi possível carregar os preços.'; });
 </script>
 </body>
 </html>
