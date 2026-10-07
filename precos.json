@@ -1,0 +1,2032 @@
+{
+ "gerado_em": "2026-10-07",
+ "fontes": [
+  {
+   "farmacia": "drogasil-recife",
+   "nota": "Coletado em 2026-10-06 no site da Drogasil, com CEP 50030-230 (Cais do Apolo, Recife - PE)."
+  }
+ ],
+ "produtos": [
+  {
+   "produto": "ACETATO DE MEDROXIPROGESTERONA 150MG",
+   "indicacao": "ANTICONCEPÇÃO",
+   "modo": "caixa",
+   "unidade": "caixa/frasco",
+   "min": 34.68,
+   "mediana": 52.87,
+   "max": 65.9,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Contracep Acetato de Medroxiprogesterona 150mg 1 Ampola",
+     "url": "https://www.drogasil.com.br/contracep-150-mg-ampola-1ml.html",
+     "preco": 34.68
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Depo-Provera Acetato de Medroxiprogesterona 150mg/ml Suspensão Injetável Intramuscular 1 ampola de 1ml",
+     "url": "https://www.drogasil.com.br/depo-provera-150-mg-frasco-ampola.html",
+     "preco": 50.85
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Demedrox Acetato de Medroxiprogesterona 150mg/ml Suspensão Injetável 1 seringa preenchida 1ml",
+     "url": "https://www.drogasil.com.br/demedrox-150-mg-com-seringa-preenchida.html",
+     "preco": 54.89
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Depo-Provera Acetato de Medroxiprogesterona 150mg/ml 1 Ampola 1ml de Suspensão Injetável",
+     "url": "https://www.drogasil.com.br/depo-provera-150-mg-seringa-1-ml.html",
+     "preco": 65.9
+    }
+   ]
+  },
+  {
+   "produto": "ETINILESTRADIOL 0,03MG + LEVONORGESTREL 0,15MG - 3 CARTELAS COM 21 COMPRIMIDOS",
+   "indicacao": "ANTICONCEPÇÃO",
+   "modo": "caixa",
+   "unidade": "caixa/frasco",
+   "min": 18.38,
+   "mediana": 24.815,
+   "max": 31.25,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Levonorgestrel 0,15mg+ Etinilestradiol 0,03mg 63 comprimidos Biolab Genérico",
+     "url": "https://www.drogasil.com.br/levonorgestrel-0-15mg-etinilestradiol-0-03mg-biolab-genericos-com-63-comprimidos-revestidos.html",
+     "preco": 18.38
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Microvlar Levonorgestrel 0,15mg + Etinilestradiol 0,03mg 63 drágeas",
+     "url": "https://www.drogasil.com.br/microvlar.html",
+     "preco": 31.25
+    }
+   ]
+  },
+  {
+   "produto": "ETINILESTRADIOL 0,03MG + LEVONORGESTREL 0,15MG - CARTELA COM 21 COMPRIMIDOS",
+   "indicacao": "ANTICONCEPÇÃO",
+   "modo": "caixa",
+   "unidade": "caixa/frasco",
+   "min": 7.29,
+   "mediana": 10.49,
+   "max": 12.54,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Levonorgestrel 0,15mg+ Etinilestradiol 0,03mg 21 comprimidos Biolab Genérico",
+     "url": "https://www.drogasil.com.br/levonorgestrel-0-15mg-etinilestradiol-0-03mg-biolab-genericos-com-21-comprimidos-revestidos.html",
+     "preco": 7.29
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Ciclo 21 Levonorgestrel 0,15mg + Etinilestradiol 0,03mg 21 comprimidos",
+     "url": "https://www.drogasil.com.br/ciclo-21-com-21-comprimidos.html",
+     "preco": 8.95
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Nociclin Levonorgestrel 0,15mg + Etinilestradiol 0,03mg 21 comprimidos",
+     "url": "https://www.drogasil.com.br/nociclin-21-comprimidos.html",
+     "preco": 10.49
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Microvlar Levonorgestrel 0,15mg + Etinilestradiol 0,03mg 21 drágeas",
+     "url": "https://www.drogasil.com.br/microvlar-21-drageas.html",
+     "preco": 11.44
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Linofeme Levonorgestrel 0,15mg + Etinilestradiol 0,03mg 21 comprimidos",
+     "url": "https://www.drogasil.com.br/linofeme-0-15mg-0-03mg-21-comprimidos-revestidos.html",
+     "preco": 12.54
+    }
+   ]
+  },
+  {
+   "produto": "NORETISTERONA 0,35MG",
+   "indicacao": "ANTICONCEPÇÃO",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 0.2626,
+   "mediana": 0.3635,
+   "max": 0.4643,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Noretisterona 0,35mg 35 comprimidos Biolab Genérico",
+     "url": "https://www.drogasil.com.br/noretisterona-0-35mg-biolab-generico-35-comprimidos.html",
+     "preco": 0.2626
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Norestin Noretisterona 0,35mg 35 comprimidos",
+     "url": "https://www.drogasil.com.br/norestin-0-35-mg-35-comprimidos.html",
+     "preco": 0.4643
+    }
+   ]
+  },
+  {
+   "produto": "VALERATO DE ESTRADIOL 5MG + ENANTATO DE NORETISTERONA 50MG",
+   "indicacao": "ANTICONCEPÇÃO",
+   "modo": "caixa",
+   "unidade": "caixa/frasco",
+   "min": 19.4,
+   "mediana": 28.29,
+   "max": 45.59,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Enantato de Noretisterona 50mg/ml + Valerato de Estradiol 5mg/ml Solução Injetável 1ml Mabra Genérico",
+     "url": "https://www.drogasil.com.br/enantato-de-noretisterona-val-de-estradiol-50mg-5mg-ml-ampola-cifarma-generico.html",
+     "preco": 19.4
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Enantato de Noretisterona 50mg/ml + Valerator de Estradiol 5mg/ml Seringa Preenchida Eurofarma Genérico",
+     "url": "https://www.drogasil.com.br/enantato-de-noretisterona-val-de-estradiol-50mg-5mg-ml-ampola-eurofarma-generico.html",
+     "preco": 27.45
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Enantato de Noretisterona 50mg + Valerato de Estradiol 5mg Ampola Eurofarma Genérico",
+     "url": "https://www.drogasil.com.br/enantato-de-noretisterona-estradiol-50mg-5mg-ml-1-seringa-eurofarma-genericos.html",
+     "preco": 28.29
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Noregyna Enantato de Noretisterona 50mg/ml + Valerato de Estradiol 5mg/ml Solução Injetável 1 ampola de 1ml + Seringa Dosadora",
+     "url": "https://www.drogasil.com.br/noregyna-50mg-5mg-c-1-ampola-seringa-dosadora.html",
+     "preco": 40.19
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Mesigyna Enantato de Noretisterona 50mg/ml + Valerato de Estradiol 5mg/ml Ampola 1ml",
+     "url": "https://www.drogasil.com.br/mesigyna-com-seringa-pre-carregada-1-ampola-1ml.html",
+     "preco": 45.59
+    }
+   ]
+  },
+  {
+   "produto": "BROMETO DE IPRATRÓPIO 0,02MG",
+   "indicacao": "ASMA",
+   "modo": "dose",
+   "unidade": "doses",
+   "min": 0.2168,
+   "mediana": 0.2168,
+   "max": 0.2168,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Atrovent N Brometo de Ipratropio 20mcg Aerosol 10ml",
+     "url": "https://www.drogasil.com.br/atrovent-n-aerosol-20-mcg-10-ml-com-200-doses.html",
+     "preco": 0.2168
+    }
+   ]
+  },
+  {
+   "produto": "BROMETO DE IPRATRÓPIO 0,25MG",
+   "indicacao": "ASMA",
+   "modo": "caixa",
+   "unidade": "caixa/frasco",
+   "min": 10.49,
+   "mediana": 13.39,
+   "max": 30.79,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Brometo de Ipratrópio 0,25mg/ml Solução para Inalação 20ml Teuto Genérico",
+     "url": "https://www.drogasil.com.br/brometo-de-ipratropio-0-25mg-ml-teuto-genericos-solucao-inalatorio-gotas-20ml.html",
+     "preco": 10.49
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Brometo de Ipratrópio 0,25mg/ml Solução Gotas 20ml Neo Química Genérico",
+     "url": "https://www.drogasil.com.br/brometo-de-ipratropio-neo-quimica-genericos-0-25-mg-frasco-20-ml.html",
+     "preco": 12.29
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Brometo de Ipratrópio 0,250mg/ml Solução para Inalação 20ml Farmaco Prati Genérico",
+     "url": "https://www.drogasil.com.br/brometo-de-ipratropio-0-25mg-farmaco-prati-genericos-solucao-inalatorio-gotas-20-ml.html",
+     "preco": 12.49
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Brometo de Ipratrópio 0,25mg/ml Solução para Inalação 20ml EMS Genérico",
+     "url": "https://www.drogasil.com.br/brometo-de-ipratropio-solucao-inalatorio-0-25mg-ems-genericos-20-ml.html",
+     "preco": 12.99
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Brometo de Ipratrópio 0,25mg/ml Solução para Inalação 20ml Aché Biosintética Genérico",
+     "url": "https://www.drogasil.com.br/brometo-de-ipratropio-solucao-inalatorio-0-25mg-biosintetica-genericos-20ml.html",
+     "preco": 13.79
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Brometo de Ipratrópio 0,25mg/ml Solução para Inalação 20ml Nova Química Genérico",
+     "url": "https://www.drogasil.com.br/brometo-de-ipratropio-0-25mg-ml-nova-quimica-genericos-solucao-inalatorio-gotas-com-20ml.html",
+     "preco": 13.99
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Brometo de Ipratrópio 0,25mg Solução para Inalação 20ml Germed Genérico",
+     "url": "https://www.drogasil.com.br/brometo-de-ipratropio-0-25mg-germed-genericos-solucao-para-inalacao-com-20ml.html",
+     "preco": 14.69
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Atrovent Brometo de Ipratrópio 0,25mg/ml Solução para Inalação Gotas 20ml",
+     "url": "https://www.drogasil.com.br/atrovent-0-025-solucao-gotas-20-ml.html",
+     "preco": 30.79
+    }
+   ]
+  },
+  {
+   "produto": "DIPROPIONATO DE BECLOMETASONA 200MCG",
+   "indicacao": "ASMA",
+   "modo": "dose",
+   "unidade": "doses",
+   "min": 0.2399,
+   "mediana": 0.2899,
+   "max": 0.3924,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Dipropionato de Beclometasona 200mcg Aerossol 200 doses Glenmark Genérico",
+     "url": "https://www.drogasil.com.br/dipropionato-de-beclometasona-200mcg-glenmark-genericos-aerosol-200-doses.html",
+     "preco": 0.2399
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Ailuk Dipropionato de Beclometasona 200mcg/dose Solução Aerosol + Frasco 200 doses",
+     "url": "https://www.drogasil.com.br/ailuk-200mcg-solucao-aerosol-200-doses.html",
+     "preco": 0.2899
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Clenil HFA Dipropionato de Beclometasona 200mcg Spray 200 doses",
+     "url": "https://www.drogasil.com.br/clenil-hfa-200-mcg-spray-200-doses.html",
+     "preco": 0.3924
+    }
+   ]
+  },
+  {
+   "produto": "DIPROPIONATO DE BECLOMETASONA 250MCG",
+   "indicacao": "ASMA",
+   "modo": "dose",
+   "unidade": "doses",
+   "min": 0.258,
+   "mediana": 0.3742,
+   "max": 0.4034,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Dipropionato de Beclometasona 250mcg Aerosol 200 doses Glenmark Genérico",
+     "url": "https://www.drogasil.com.br/dipropionato-de-beclometasona-250mcg-dose-glenmark-genericos-solucao-aerossol-com-200-doses.html",
+     "preco": 0.258
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Ailuk Dipropionato de Beclometasona 250mcg Solução Aerossol 200 doses",
+     "url": "https://www.drogasil.com.br/ailuk-250mcg-solucao-aerosol-200-doses-1085261.html",
+     "preco": 0.3449
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Clenil HFA Dipropionato de Beclometasona 250mcg Aerosol 200 doses",
+     "url": "https://www.drogasil.com.br/clenil-hfa-250-mcg-aerosol-spray-200-doses.html",
+     "preco": 0.4034
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Clenil HFA JET Dipropionato de Beclometasona 250mcg Aerosol 200 doses",
+     "url": "https://www.drogasil.com.br/clenil-hfa-250-mcg-aerosol-spray-jet-200-doses.html",
+     "preco": 0.4034
+    }
+   ]
+  },
+  {
+   "produto": "DIPROPIONATO DE BECLOMETASONA 50MCG",
+   "indicacao": "ASMA",
+   "modo": "dose",
+   "unidade": "doses",
+   "min": 0.1449,
+   "mediana": 0.1675,
+   "max": 0.2399,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Dipropionato de Beclometasona 50mcg Aerossol Oral 200 doses Glenmark Genérico",
+     "url": "https://www.drogasil.com.br/dipropionato-de-beclometasona-50mcg-glenmark-genericos-aerosol-200-doses.html",
+     "preco": 0.1449
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Ailuk Dipropionato de Beclometasona 50mcg Solução Aerossol 200 doses",
+     "url": "https://www.drogasil.com.br/ailuk-50mcg-solucao-aerosol-200-doses-1085251.html",
+     "preco": 0.1675
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Clenil HFA Dipropionato de Beclometasona 50mcg Spray 200 doses",
+     "url": "https://www.drogasil.com.br/clenil-hfa-50mcg-aerosol-spray-200-doses.html",
+     "preco": 0.2399
+    }
+   ]
+  },
+  {
+   "produto": "SULFATO DE SALBUTAMOL 100MCG",
+   "indicacao": "ASMA",
+   "modo": "dose",
+   "unidade": "doses",
+   "min": 0.08,
+   "mediana": 0.125,
+   "max": 0.1625,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sulfato de Salbutamol 100mcg 200 Doses Spray Glenmark Genérico",
+     "url": "https://www.drogasil.com.br/sulfato-de-salbutamol-100mcg-spray-com-200-doses.html",
+     "preco": 0.08
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Aerolin Sulfato de Salbutamol 100mcg Spray 200 Doses",
+     "url": "https://www.drogasil.com.br/aerolin-100-mcg-aerosol-spray-200-doses.html",
+     "preco": 0.1245
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Aerodini Sulfato de Salbutamol 100mcg Spray 200 Doses",
+     "url": "https://www.drogasil.com.br/aerodini-100-mcg-spray-200-doses.html",
+     "preco": 0.1255
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Aerogold Sulfato de Salbutamol 100mcg Spray 200 Doses",
+     "url": "https://www.drogasil.com.br/aerogold-100mcg-spray-200-doses.html",
+     "preco": 0.1625
+    }
+   ]
+  },
+  {
+   "produto": "SULFATO DE SALBUTAMOL 5MG",
+   "indicacao": "ASMA",
+   "modo": "caixa",
+   "unidade": "caixa/frasco",
+   "sem_preco": true,
+   "ofertas": []
+  },
+  {
+   "produto": "CLORIDRATO DE METFORMINA 500MG",
+   "indicacao": "DIABETES",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 0.1748,
+   "mediana": 0.2403,
+   "max": 1.032,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cloridrato de Metformina 500mg 60 comprimidos Prati Donaduzzi Genérico",
+     "url": "https://www.drogasil.com.br/cloridrato-metformina-500mg-prati-genericos-60-comprimidos-revestidos.html",
+     "preco": 0.1748
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cloridrato de Metformina 500mg 30 comprimidos Prati Donaduzzi Genérico",
+     "url": "https://www.drogasil.com.br/cloridrato-metformina-500-mg-farmaco-prati-generico-30-comprimidos-revestidos.html",
+     "preco": 0.215
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cloridrato de Metformina 500mg 30 comprimidos Teuto Genérico",
+     "url": "https://www.drogasil.com.br/cloridrato-de-metformina-500mg-teuto-genericos-30-comprimidos.html",
+     "preco": 0.2397
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cloridrato de Metformina 500mg 30 comprimidos Merck Genérico",
+     "url": "https://www.drogasil.com.br/cloridrato-de-metformina-500-mg-merck-generico-30-comprimidos-revestidos.html",
+     "preco": 0.2403
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cloridrato de Metformina 500mg - 30 comprimidos Vitamedic Genérico",
+     "url": "https://www.drogasil.com.br/cloridrato-de-metformina-500mg-vitamedic-genericos-30-comprimidos.html",
+     "preco": 0.2683
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cloridrato de Metformina 500mg 60 comprimidos Merck Genérico",
+     "url": "https://www.drogasil.com.br/cloridrato-de-metformina-500-mg-merck-generico-60-comprimidos-revestidos.html",
+     "preco": 0.3463
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Glifage Cloridrato de Metformina 500mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/glifage-500-mg-30-comprimidos.html",
+     "preco": 1.032
+    }
+   ]
+  },
+  {
+   "produto": "CLORIDRATO DE METFORMINA 500MG - AÇÃO PROLONGADA",
+   "indicacao": "DIABETES",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 0.255,
+   "mediana": 0.3063,
+   "max": 0.3633,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cloridrato de Metformina 500mg 30 comprimidos Merck Genérico",
+     "url": "https://www.drogasil.com.br/cloridrato-metformina-500mg-merck-genericos-30-comprimidos-de-liberacao-prolongada.html",
+     "preco": 0.255
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cloridrato de Metformina 500mg 30 comprimidos Liberação Prolongada Prati Donaduzzi Genérico",
+     "url": "https://www.drogasil.com.br/cloridrato-metformina-500-mg-farmaco-prati-generico-30-comprimidos-liberacao-prolongadora.html",
+     "preco": 0.3063
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Glifage XR 500mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/glifage-xr-500-mg-30-comprimidos.html",
+     "preco": 0.3633
+    }
+   ]
+  },
+  {
+   "produto": "CLORIDRATO DE METFORMINA 850MG",
+   "indicacao": "DIABETES",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 0.172,
+   "mediana": 0.2917,
+   "max": 1.3887,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cloridrato de Metformina 850mg 30 comprimidos Prati Donaduzzi Genérico",
+     "url": "https://www.drogasil.com.br/cloridrato-de-metformina-850-mg-farmaco-prati-generico-30-comprimidos.html",
+     "preco": 0.172
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cloridrato de Metformina 850mg 30 comprimidos Nova Química Genérico",
+     "url": "https://www.drogasil.com.br/cloridrato-de-metformina-850mg-nova-quimica-genericos-com-30-comprimidos-revestidos.html",
+     "preco": 0.2533
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Glicomet Cloridrato de Metformina 850mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/glicomet-850mg-com-30-comprimidos.html",
+     "preco": 0.2737
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cloridrato de Metformina 850mg 30 comprimidos Merck Genérico",
+     "url": "https://www.drogasil.com.br/cloridrato-de-metformina-merck-generico-850-30-comprimidos-revestidos.html",
+     "preco": 0.2807
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cloridrato de Metformina 850mg 30 comprimidos Teuto Genérico",
+     "url": "https://www.drogasil.com.br/cloridrato-de-metformina-850mg-teuto-genericos-30-comprimidos.html",
+     "preco": 0.2917
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cloridrato de Metformina 850mg - 30 comprimidos Vitamedic Genérico",
+     "url": "https://www.drogasil.com.br/cloridrato-de-metformina-850mg-vitamedic-genericos-30-comprimidos.html",
+     "preco": 0.305
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Glicefor Cloridrato de Metformina 850mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/glicefor-850mg.html",
+     "preco": 0.423
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cloridrato de Metformina 850mg 60 comprimidos Merck Genérico",
+     "url": "https://www.drogasil.com.br/cloridrato-de-metformina-merck-generico-850-60-comprimidos-revestidos.html",
+     "preco": 0.4617
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Glifage Cloridrato de Metformina 850mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/glifage-850-mg-30-comprimidos.html",
+     "preco": 1.3887
+    }
+   ]
+  },
+  {
+   "produto": "GLIBENCLAMIDA 5MG",
+   "indicacao": "DIABETES",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 0.1087,
+   "mediana": 0.1463,
+   "max": 0.8823,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Glibenclamida 5mg 30 comprimidos Neo Química Genérico",
+     "url": "https://www.drogasil.com.br/glibenclamida-5mg-neo-quimica-genericos-30-comprimidos.html",
+     "preco": 0.1087
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Glibenclamida 5mg 30 comprimidos EMS Genérico",
+     "url": "https://www.drogasil.com.br/glibenclamida-5mg-ems-generico-30-comprimidos.html",
+     "preco": 0.1397
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Glibenclamida 5mg 30 comprimidos Germed Genérico",
+     "url": "https://www.drogasil.com.br/glibenclamida-germed-genericos-5mg-30-comprimidos.html",
+     "preco": 0.1407
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Glibenclamida 5mg 30 comprimidos Prati Donaduzzi Genérico",
+     "url": "https://www.drogasil.com.br/glibenclamida-5-mg-farmaco-prati-genericos-30-comprimidos.html",
+     "preco": 0.143
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Glibenclamida 5mg 30 comprimidos Cimed Genérico",
+     "url": "https://www.drogasil.com.br/glibenclamida-5mg-cimed-genericos-30-comprimidos.html",
+     "preco": 0.1497
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Glibenclamida 5mg 30 comprimidos Medley Genérico",
+     "url": "https://www.drogasil.com.br/glibenclamida-5mg-medley-genericos-com-30-comprimidos.html",
+     "preco": 0.4563
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Gliconil Glibenclamida 5mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/gliconil-5mg-30-comprimidos.html",
+     "preco": 0.46
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Daonil Glibenclamida 5mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/daonil-5-mg-30-comprimidos.html",
+     "preco": 0.8823
+    }
+   ]
+  },
+  {
+   "produto": "INSULINA HUMANA 100UI/ML",
+   "indicacao": "DIABETES",
+   "modo": "caixa",
+   "unidade": "caixa/frasco",
+   "min": 38.79,
+   "mediana": 73.24,
+   "max": 140.99,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Insulina Novolin N 100UI/ml Suspensão Injetável 1 Ampola de 10ml Geladeira",
+     "url": "https://www.drogasil.com.br/novolin-100-ui-ampola-nph-insulina-1x10-ml.html",
+     "preco": 38.79
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Insulina Novolin N 100UI/ml Suspensão Injetável 1 Ampola de 10ml Geladeira",
+     "url": "https://www.drogasil.com.br/novolin-100-ui-ampola-nph-insulina-1x10-ml.html",
+     "preco": 38.79
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Insulina Humulin N 100UI/ml Suspensão Injetável 1 Ampola de 10ml Geladeira",
+     "url": "https://www.drogasil.com.br/humulin-100-ui-ampola-nph-insulina-1x10-ml.html",
+     "preco": 69.99
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Insulina Humulin N 100UI/ml Suspensão Injetável 1 Ampola de 10ml Geladeira",
+     "url": "https://www.drogasil.com.br/humulin-100-ui-ampola-nph-insulina-1x10-ml.html",
+     "preco": 69.99
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Refil Insulina Humulin N 100Ui/ml Suspensão Injetável 2 unidades de 3ml cada Geladeira",
+     "url": "https://www.drogasil.com.br/insulina-humulin-n-100-ui-refil-2x3-ml.html",
+     "preco": 76.49
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Refil Insulina Humulin N 100Ui/ml Suspensão Injetável 2 unidades de 3ml cada Geladeira",
+     "url": "https://www.drogasil.com.br/insulina-humulin-n-100-ui-refil-2x3-ml.html",
+     "preco": 76.49
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Insulina Novolin N Penfill 100UI/ml Solução Injetável 5 Ampolas de 3ml cada Geladeira",
+     "url": "https://www.drogasil.com.br/insulina-novolin-n-penfill-100ui-ampolas-5x3ml.html",
+     "preco": 140.99
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Insulina Novolin N Penfill 100UI/ml Solução Injetável 5 Ampolas de 3ml cada Geladeira",
+     "url": "https://www.drogasil.com.br/insulina-novolin-n-penfill-100ui-ampolas-5x3ml.html",
+     "preco": 140.99
+    }
+   ]
+  },
+  {
+   "produto": "INSULINA HUMANA REGULAR 100UI/ML",
+   "indicacao": "DIABETES",
+   "modo": "caixa",
+   "unidade": "caixa/frasco",
+   "min": 61.19,
+   "mediana": 71.255,
+   "max": 129.49,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Insulina Novolin R 100UI/ml Solução Injetável 1 Ampola de 10ml Geladeira",
+     "url": "https://www.drogasil.com.br/novolin-insulina-humana-regular-100ui-10ml-frasco-ampola.html",
+     "preco": 61.19
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Insulina Novolin R 100UI/ml Solução Injetável 1 Ampola de 10ml Geladeira",
+     "url": "https://www.drogasil.com.br/novolin-insulina-humana-regular-100ui-10ml-frasco-ampola.html",
+     "preco": 61.19
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Insulina Wosulin-R 100 U.I Solução Injetável Ampola 10ml Geladeira",
+     "url": "https://www.drogasil.com.br/wosulin-r-100ui-insulina-solucao-injetavel-10ml.html",
+     "preco": 69.52
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Insulina Wosulin-R 100 U.I Solução Injetável Ampola 10ml Geladeira",
+     "url": "https://www.drogasil.com.br/wosulin-r-100ui-insulina-solucao-injetavel-10ml.html",
+     "preco": 69.52
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Insulina Humulin R 100Ui/ml Solução Injetável 1 Ampola de 10ml Geladeira",
+     "url": "https://www.drogasil.com.br/humulin-100-ui-ampola-regular-insulina-1x10-ml.html",
+     "preco": 72.99
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Insulina Humulin R 100Ui/ml Solução Injetável 1 Ampola de 10ml Geladeira",
+     "url": "https://www.drogasil.com.br/humulin-100-ui-ampola-regular-insulina-1x10-ml.html",
+     "preco": 72.99
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Insulina Novolin R Penfill 100UI/ml Solução Injetável 5 Ampolas de 3ml cada Geladeira",
+     "url": "https://www.drogasil.com.br/insulina-novolin-r-penfill-100ui-ampolas-5x3ml.html",
+     "preco": 129.49
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Insulina Novolin R Penfill 100UI/ml Solução Injetável 5 Ampolas de 3ml cada Geladeira",
+     "url": "https://www.drogasil.com.br/insulina-novolin-r-penfill-100ui-ampolas-5x3ml.html",
+     "preco": 129.49
+    }
+   ]
+  },
+  {
+   "produto": "DAPAGLIFLOZINA 10 MG",
+   "indicacao": "DIABETES MELLITUS + DOENÇA CARDIOVASCULAR",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 2.6833,
+   "mediana": 4.8812,
+   "max": 5.2387,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Edistride 10mg - Dapagliflozina - 30 comprimidos",
+     "url": "https://www.drogasil.com.br/edistride-10mg-30-comprimidos-revestidos.html",
+     "preco": 2.6833
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Forxiga Dapagliflozina 10mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/forxiga-10-mg-30-comprimidos-revestidos.html",
+     "preco": 3.9663
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Dapagliflozina 10mg 30 comprimidos revestidos EMS Genérico",
+     "url": "https://www.drogasil.com.br/dapagliflozina-10mg-germed-genericos-30-comprimidos-revestidos-1434975.html",
+     "preco": 4.881
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Dapagliflozina 10mg 30 comprimidos Medley Genérico",
+     "url": "https://www.drogasil.com.br/dapagliflozina-10mg-sandoz-genericos-30-comprimidos.html",
+     "preco": 4.8813
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Dapagliflozina 10mg 30 comprimidos Eurofarma Genérico",
+     "url": "https://www.drogasil.com.br/dapagliflozina-10mg-eurofarma-genericos-30-comprimidos-1342614.html",
+     "preco": 4.8817
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Glif Dapagliflozina 10mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/glif-10mg-30-comprimidos-1440638.html",
+     "preco": 5.2387
+    }
+   ]
+  },
+  {
+   "produto": "ABSORVENTE HIGIÊNICO",
+   "indicacao": "DIGNIDADE MENSTRUAL",
+   "modo": "caixa",
+   "unidade": "caixa/frasco",
+   "sem_preco": true,
+   "ofertas": []
+  },
+  {
+   "produto": "SINVASTATINA 10MG",
+   "indicacao": "DISLIPIDEMIA",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 0.1787,
+   "mediana": 0.388,
+   "max": 0.994,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastatina 10mg 30 comprimidos Sandoz Genérico",
+     "url": "https://www.drogasil.com.br/sinvastatina-10-mg-hexal-generico-30-comprimidos-revestidos.html",
+     "preco": 0.1787
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastacor Sinvastatina 10mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/sinvastacor-10-mg-30-comprimidos-revestidos.html",
+     "preco": 0.205
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastatina 10mg 30 Comprimidos Pharlab Genérico",
+     "url": "https://www.drogasil.com.br/sinvastatina-10mg-pharlab-genericos-com-30-comprimidos-revestidos.html",
+     "preco": 0.2397
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastatina 10mg 30 Comprimidos Biolab Genérico",
+     "url": "https://www.drogasil.com.br/sinvastatina-10mg-biolab-genericos-30-comprimidos.html",
+     "preco": 0.2497
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastatina 10mg  30 Comprimidos EMS Genérico",
+     "url": "https://www.drogasil.com.br/sinvastatina-10-mg-ems-generico-30-comprimidos-revestidos.html",
+     "preco": 0.2597
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvascor Sinvastatina 10mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/sinvascor-10-mg-30-comprimidos-revestidos.html",
+     "preco": 0.5163
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Unak Sivastatina 10mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/unak-10mg-30-comprimidos.html",
+     "preco": 0.8377
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Clinfar Sinvastatina 10mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/clinfar-10mg-com-30-comprimidos-revestidos.html",
+     "preco": 0.9663
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvalip Sinvastatina 10mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/sinvalip-10-mg-30-comprimidos-revestidos.html",
+     "preco": 0.981
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Vaslip Sinvastatina 10mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/vaslip-10-mg-30-comprimidos-revestidos.html",
+     "preco": 0.994
+    }
+   ]
+  },
+  {
+   "produto": "SINVASTATINA 20MG",
+   "indicacao": "DISLIPIDEMIA",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 0.2983,
+   "mediana": 0.4497,
+   "max": 2.085,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastatina 20mg 30 Comprimidos Cimed Genérico",
+     "url": "https://www.drogasil.com.br/sinvastatina-20-mg-cimed-generico-30-comprimidos.html",
+     "preco": 0.2983
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastacor Sinvastatina 20mg 30 Comprimidos",
+     "url": "https://www.drogasil.com.br/sinvastacor-20-mg-30-comprimidos.html",
+     "preco": 0.3063
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastatina 20mg 30 Comprimidos Pharlab Genérico",
+     "url": "https://www.drogasil.com.br/sinvastatina-20mg-pharlab-genericos-30-comprimidos.html",
+     "preco": 0.3563
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastatina 20mg 30 comprimidos Globo Pharma Genérico",
+     "url": "https://www.drogasil.com.br/sinvastatina-20mg-globo-genericos-30-comprimidos.html",
+     "preco": 0.383
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastatina 20mg 30 comprimidos Novartis Genérico",
+     "url": "https://www.drogasil.com.br/sinvastatina-20mg-novartis-genericos-30-comprimidos.html",
+     "preco": 0.3863
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastatina 20mg 30 comprimidos Nova Química Genérico",
+     "url": "https://www.drogasil.com.br/sinvastatina-20-mg-nova-quimica-genericos-30-comprimidos.html",
+     "preco": 0.4163
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastatina 20mg 30 Comprimidos EMS Genérico",
+     "url": "https://www.drogasil.com.br/sinvastatina-20-mg-ems-genericos-30-comprimidos-revestidos.html",
+     "preco": 0.4497
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvasmax Sinvastatina 20mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/sinvasmax-20mg-com-30-comprimidos.html",
+     "preco": 0.5997
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvascor Sinvastatina 20mg 30 Comprimidos",
+     "url": "https://www.drogasil.com.br/sinvascor-20-mg-30-comprimidos.html",
+     "preco": 0.7797
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Unak Sinvastatina 20mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/unak-20mg-30-comprimidos.html",
+     "preco": 1.367
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Vaslip Sinvastatina 20mg 30 Comprimidos",
+     "url": "https://www.drogasil.com.br/vaslip-20mg-30-comprimidos-revestidos.html",
+     "preco": 1.5263
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Clinfar Sinvastatina 20mg 30 Comprimidos",
+     "url": "https://www.drogasil.com.br/clinfar-20mg-30-comprimidos-revestidos.html",
+     "preco": 2.0233
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvalip Sinvastatina 20mg 30 Comprimidos",
+     "url": "https://www.drogasil.com.br/sinvalip-20-mg-30-comprimidos.html",
+     "preco": 2.085
+    }
+   ]
+  },
+  {
+   "produto": "SINVASTATINA 40MG",
+   "indicacao": "DISLIPIDEMIA",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 0.4997,
+   "mediana": 0.7497,
+   "max": 3.8663,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastatina 40mg 30 Comprimidos Cimed Genérico",
+     "url": "https://www.drogasil.com.br/sinvastatina-40mg-cimed-generico-30-comprimidos-revestidos.html",
+     "preco": 0.4997
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastacor Sinvastatina 40mg 30 Comprimidos",
+     "url": "https://www.drogasil.com.br/sinvastacor-40mg-30-comprimidos-revestidos.html",
+     "preco": 0.5197
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastatina 40mg 30 comprimidos Nova Química Genérico",
+     "url": "https://www.drogasil.com.br/sinvastatina-40mg-multilab-genericos-30-comprimidos.html",
+     "preco": 0.5997
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastatina 40mg 30 Comprimidos EMS Genérico",
+     "url": "https://www.drogasil.com.br/sinvastatina-40-mg-ems-generico-30-comprimidos-revestidos.html",
+     "preco": 0.6263
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastatina 40mg 30 comprimidos Novartis Genérico",
+     "url": "https://www.drogasil.com.br/sinvastatina-40mg-novartis-genericos-30-comprimidos.html",
+     "preco": 0.6497
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastatina 10mg 30 Comprimidos Germed Genérico",
+     "url": "https://www.drogasil.com.br/sinvastatina-40mg-germed-genericos-30-comprimidos.html",
+     "preco": 0.6997
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastatina 10mg 30 Comprimidos Germed Genérico",
+     "url": "https://www.drogasil.com.br/sinvastatina-40mg-germed-genericos-30-comprimidos.html",
+     "preco": 0.6997
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastatina 40mg 30 comprimidos Globo Pharma Genérico",
+     "url": "https://www.drogasil.com.br/sinvastatina-40mg-globo-genericos-30-comprimidos.html",
+     "preco": 0.7497
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastatina 40mg 30 Comprimidos Pharlab Genérico",
+     "url": "https://www.drogasil.com.br/sinvastatina-40mg-pharlab-genericos-30-comprimidos-revestidos.html",
+     "preco": 0.7497
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvasmax Sinvastatina 40mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/sinvasmax-40mg-30-comprimidos-997262.html",
+     "preco": 0.8963
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvastatina 40mg 30 Comprimidos Sandoz Genérico",
+     "url": "https://www.drogasil.com.br/sinvastatina-40-mg-sandoz-generico-30-comprimidos.html",
+     "preco": 1.1753
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvascor Sinvastatina 40mg 30 Comprimidos",
+     "url": "https://www.drogasil.com.br/sinvascor-40mg-30-comprimidos.html",
+     "preco": 1.2263
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Unak Sivastatina 40mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/unak-40mg-30-comprimidos.html",
+     "preco": 2.203
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Lipistatina Sinvastatina 40mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/lipistatina-40mg-2-blister-15-comprimidos-revestidos.html",
+     "preco": 2.4247
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Sinvalip Sinvastatina 40mg 30 Comprimidos",
+     "url": "https://www.drogasil.com.br/sinvalip-40mg-30-comprimidos.html",
+     "preco": 3.5437
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Clinfar Sinvastatina 40mg 30 Comprimidos",
+     "url": "https://www.drogasil.com.br/clinfar-40-mg-30-comprimidos-revestidos.html",
+     "preco": 3.8663
+    }
+   ]
+  },
+  {
+   "produto": "CARBIDOPA 25MG + LEVODOPA 250MG",
+   "indicacao": "DOENÇA DE PARKINSON",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 1.0897,
+   "mediana": 1.3663,
+   "max": 2.0423,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Carbidol Carbidopa Monoidratada 25mg + Levodopa 250mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/carbidol-25mg-250mg-c-30-comprimidos.html",
+     "preco": 1.0897
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Carbidopa 25mg + Levodopa 250mg 30 comprimidos Zydus Genérico",
+     "url": "https://www.drogasil.com.br/carbidopa-25mg-levodopa-250mg-zydus-genericos-30-comprimidos-1146378.html",
+     "preco": 1.3663
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Parkidopa Levodopa 250mg + Carbidopa 25mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/parkidopa-25-250mg-com-30-comprimidos.html",
+     "preco": 2.0423
+    }
+   ]
+  },
+  {
+   "produto": "CLORIDRATO DE BENSERAZIDA 25MG + LEVODOPA 100MG",
+   "indicacao": "DOENÇA DE PARKINSON",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 1.701,
+   "mediana": 2.0263,
+   "max": 3.0997,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Prolopa BD Levodopa 100mg + Benserazida 25mg 60 comprimidos",
+     "url": "https://www.drogasil.com.br/prolopa-bd-125-mg-60-comprimidos.html",
+     "preco": 1.701
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Ekson Levodopa 100mg + Benserazida 25mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/ekson-100-25mg-com-30-comprimidos.html",
+     "preco": 1.9063
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Prolopa BD Levodopa 100mg + Benserazida 25mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/prolopa-bd-125-mg-30-comprimidos.html",
+     "preco": 2.0263
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Prolopa HBS Levodopa 100mg + Benserazida 25mg 30 cápsulas",
+     "url": "https://www.drogasil.com.br/prolopa-hbs-125-mg-30-capsulas.html",
+     "preco": 2.9663
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Prolopa Levodopa 100mg + Benserazida 25mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/prolopa-125-mg-dispersivel-30-comprimidos.html",
+     "preco": 3.0997
+    }
+   ]
+  },
+  {
+   "produto": "MALEATO DE TIMOLOL 2,5MG",
+   "indicacao": "GLAUCOMA",
+   "modo": "caixa",
+   "unidade": "caixa/frasco",
+   "sem_preco": true,
+   "ofertas": []
+  },
+  {
+   "produto": "MALEATO DE TIMOLOL 5MG",
+   "indicacao": "GLAUCOMA",
+   "modo": "caixa",
+   "unidade": "caixa/frasco",
+   "min": 8.05,
+   "mediana": 9.52,
+   "max": 16.95,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Maleato de Timolol 0,5% Solução Oftalmológica 5ml Teuto Genérico",
+     "url": "https://www.drogasil.com.br/maleato-timolol-0-5-teuto-generico-frasco-com-5ml.html",
+     "preco": 8.05
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Maleato de Timolol 5mg/ml Solução Oftalmológica 5ml EMS Genérico",
+     "url": "https://www.drogasil.com.br/maleato-timolol-0-5-ems-generico-frasco-5ml.html",
+     "preco": 9.39
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Maleato de Timolol 5mg/ml Solução Oftalmológica Gotas 5ml Neo Química Genérico",
+     "url": "https://www.drogasil.com.br/maleato-timolol-5mg-neoquimica-generico-frasco-com-5ml.html",
+     "preco": 9.65
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Glaucotrat Maleato de Timolol 0,5% Solução Oftálmica 5ml",
+     "url": "https://www.drogasil.com.br/glaucotrat-colirio-5ml.html",
+     "preco": 16.95
+    }
+   ]
+  },
+  {
+   "produto": "ATENOLOL 25MG",
+   "indicacao": "HIPERTENSÃO",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 0.0663,
+   "mediana": 0.1364,
+   "max": 0.8563,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Atenolol 25mg 30 comprimidos Neo Química Genérico",
+     "url": "https://www.drogasil.com.br/atenolol-25mg-neo-quimica-genericos-30-comprimidos.html",
+     "preco": 0.0663
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Atenolol 25mg 30 comprimidos Medley Genérico",
+     "url": "https://www.drogasil.com.br/atenolol-25-mg-medley-generico-30-comprimidos.html",
+     "preco": 0.0783
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Atenolol 25mg 30 comprimidos Aché Biosintética Genérico",
+     "url": "https://www.drogasil.com.br/atenolol-25-mg-biosintetica-generico-30-comprimidos.html",
+     "preco": 0.1043
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Atenolol 25mg 30 comprimidos Sandoz  Genérico",
+     "url": "https://www.drogasil.com.br/atenolol-25mg-sandoz-generico-30-comprimidos.html",
+     "preco": 0.113
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Atenolol 25mg Vitamedic 30 Comprimidos Genérico",
+     "url": "https://www.drogasil.com.br/atenolol-25mg-vitamedic-genericos-30-comprimidos.html",
+     "preco": 0.123
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Atenolol 25mg 30 comprimidos EMS Genérico",
+     "url": "https://www.drogasil.com.br/atenolol-25-mg-ems-generico-30-comprimidos.html",
+     "preco": 0.1497
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Atenolol 25mg 60 comprimidos EMS Genérico",
+     "url": "https://www.drogasil.com.br/atenolol-25mg-ems-generico-60-comprimidos.html",
+     "preco": 0.1782
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Atenolol 25mg 60 comprimidos Sandoz Genérico",
+     "url": "https://www.drogasil.com.br/atenolol-25mg-sandoz-genericos-60-comprimidos.html",
+     "preco": 0.2498
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Ablok Atenolol 25mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/ablok-25-mg-30-comprimidos.html",
+     "preco": 0.483
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Angipress Atenolol 25mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/angipress-25-mg-30-comprimidos.html",
+     "preco": 0.8563
+    }
+   ]
+  },
+  {
+   "produto": "BESILATO DE ANLODIPINO 5 MG",
+   "indicacao": "HIPERTENSÃO",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 0.0883,
+   "mediana": 0.333,
+   "max": 2.9663,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Besilato de Anlodipino 5mg 30 comprimidos Cimed Genérico",
+     "url": "https://www.drogasil.com.br/besilato-de-anlodipino-5mg-cimed-generico-com-30-comprimidos.html",
+     "preco": 0.0883
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Besilato de Anlodipino 5mg Neo Química 30 comprimidos - Genérico",
+     "url": "https://www.drogasil.com.br/besilato-de-anlodipino-5-mg-neo-quimica-genericos-com-30-comprimidos.html",
+     "preco": 0.0917
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Besilato de Anlodipino 5mg Vitamedic 30 Comprimidos Genérico",
+     "url": "https://www.drogasil.com.br/besilato-de-anlodipino-5mg-vitamedic-genericos-30-comprimidos.html",
+     "preco": 0.1483
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Besilato de Anlodipino 5mg 30 comprimidos Teuto Genérico",
+     "url": "https://www.drogasil.com.br/besilato-de-anlodipino-5-mg-teuto-generico-30-comprimidos.html",
+     "preco": 0.1563
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Besilato de anlodipino 5mg - 30 comprimidos Geolab Genérico",
+     "url": "https://www.drogasil.com.br/besilato-de-anlodipino-5mg-geolab-genericos-30-comprimidos.html",
+     "preco": 0.1663
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Besilato de Anlodipino 5mg 30 comprimidos Sandoz Genérico",
+     "url": "https://www.drogasil.com.br/besilato-de-anlodipino-sandoz-generico-5mg-30-comprimidos.html",
+     "preco": 0.1817
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Besilato de Anlodipino 5mg 30 comprimidos Medley Genérico",
+     "url": "https://www.drogasil.com.br/besilato-de-anlodipino-5-mg-medley-generico-30-comprimidos.html",
+     "preco": 0.2697
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Amlovasc Besilato de Anlodipino 5mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/amlovasc-5-mg-30-comprimidos.html",
+     "preco": 0.2997
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Besilato de Anlodipino 5mg 60 Comprimidos Sandoz Genérico",
+     "url": "https://www.drogasil.com.br/besilato-de-anlodipino-sandoz-generico-5mg-60-comprimidos.html",
+     "preco": 0.2998
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Besilato de Anlodipino 5mg 30 comprimidos Prati Donaduzzi Genérico",
+     "url": "https://www.drogasil.com.br/besilato-de-anlodipino-5mg-prati-donaduzzi-genericos-30-comprimidos.html",
+     "preco": 0.315
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Tensaliv Besilato de Anlodipino 5mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/tensaliv-5-mg-30-comprimidos.html",
+     "preco": 0.333
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Besilato de Anlodipino 5mg 30 comprimidos Aché Genérico",
+     "url": "https://www.drogasil.com.br/besilato-de-anlodipino-5-mg-biosintetica-generico-30-comprimidos.html",
+     "preco": 0.333
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Besilato de Anlodipino 5mg 60 comprimidos Aché Genérico",
+     "url": "https://www.drogasil.com.br/besilato-de-anlodipino-5mg-biosintetica-generico-60-comprimidos.html",
+     "preco": 0.3432
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Besilato de Anlodipino 5mg 60 comprimidos Prati Donaduzzi Genérico",
+     "url": "https://www.drogasil.com.br/besilato-de-anlodipino-5mg-prati-donaduzzi-genericos-com-60-comprimidos.html",
+     "preco": 0.3582
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Besilapin Besilato de Anlodipino 5mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/besilapin-5mg-30-comprimidos.html",
+     "preco": 0.6423
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Roxflan Besilato de Anlodipino 5mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/roxflan-5mg-30-comprimidos.html",
+     "preco": 1.082
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cordarex Besilato de Anlodipino 5mg 60 comprimidos",
+     "url": "https://www.drogasil.com.br/cordarex-5mg-60-comprimidos.html",
+     "preco": 1.3007
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cordarex Besilato de Anlodipino 5mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/cordarex-5mg-c-30-comprimidos.html",
+     "preco": 1.3337
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Pressat Besilato de Anlodipino 5mg 60 comprimidos",
+     "url": "https://www.drogasil.com.br/pressat-5mg-60-comprimidos.html",
+     "preco": 1.8248
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Pressat Besilato de Anlodipino 5mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/pressat-5mg-30-comprimidos.html",
+     "preco": 2.264
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Norvasc Besilato de Anlodipino 5mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/norvasc-5-mg-30-comprimidos.html",
+     "preco": 2.9663
+    }
+   ]
+  },
+  {
+   "produto": "CAPTOPRIL 25MG",
+   "indicacao": "HIPERTENSÃO",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 0.0917,
+   "mediana": 0.128,
+   "max": 0.1583,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Captopril 25mg 30 Comprimidos Medley Genérico",
+     "url": "https://www.drogasil.com.br/captopril-25-mg-medley-generico-30-comprimidos.html",
+     "preco": 0.0917
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Captopril 25mg - 30 comprimidos Prati Donaduzzi Genérico",
+     "url": "https://www.drogasil.com.br/captopril-25-mg-farmaco-prati-generico-30-comprimidos.html",
+     "preco": 0.1197
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Captopril 25mg 30 comprimidos Neo Química Genérico",
+     "url": "https://www.drogasil.com.br/captopril-neo-quimica-generico-25mg-com-30-comprimidos.html",
+     "preco": 0.1263
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Captopril 25mg 30 comprimidos Teuto Genérico",
+     "url": "https://www.drogasil.com.br/captopril-25mg-teuto-generico-30-comprimidos.html",
+     "preco": 0.1297
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Captopril 25mg 30 comprimidos Cimed Genérico",
+     "url": "https://www.drogasil.com.br/captopril-25mg-cimed-generico-30-comprimidos.html",
+     "preco": 0.1397
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Captopril 25mg 30 comprimidos EMS Genérico",
+     "url": "https://www.drogasil.com.br/captopril-25-mg-ems-generico-30-comprimidos.html",
+     "preco": 0.1583
+    }
+   ]
+  },
+  {
+   "produto": "CLORIDRATO DE PROPRANOLOL 40MG",
+   "indicacao": "HIPERTENSÃO",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 0.1333,
+   "mediana": 0.1463,
+   "max": 0.6027,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cloridrato de Propranolol 40mg 30 Comprimidos Neo Química Genérico",
+     "url": "https://www.drogasil.com.br/cloridrato-de-propranolol-neo-quimica-40-mg-30-comprimidos.html",
+     "preco": 0.1333
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cloridrato de Propranolol 40mg 30 Comprimidos Teuto Genérico",
+     "url": "https://www.drogasil.com.br/cloridrato-de-propranolol-40-mg-teuto-genericos-30-comprimidos.html",
+     "preco": 0.1363
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cloridrato de Propranolol 40mg 30 comprimidos Pharlab Genérico",
+     "url": "https://www.drogasil.com.br/cloridrato-de-propranolol-40mg-pharlab-genericos-com-30-comprimidos.html",
+     "preco": 0.143
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cloridrato de Propranolol 40mg 30 Comprimidos União Química Genérico",
+     "url": "https://www.drogasil.com.br/cloridrato-de-propranolol-40-mg-sanus-generico-30-comprimidos.html",
+     "preco": 0.1463
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cloridrato de Propranolol 40mg 30 comprimidos Medley Genérico",
+     "url": "https://www.drogasil.com.br/cloridrato-de-propranolol-40mg.html",
+     "preco": 0.1897
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cloridrato de Propranolol 40mg 60 comprimidos Germed Genérico",
+     "url": "https://www.drogasil.com.br/cloridrato-de-propranolol-40mg-germed-generico-com-60-comprimidos.html",
+     "preco": 0.2932
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Ayerst Propran Cloridrato de Propranolol 40mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/propranolol-40-mg-ayerst-30-comprimidos.html",
+     "preco": 0.6027
+    }
+   ]
+  },
+  {
+   "produto": "ESPIRONOLACTONA 25 MG",
+   "indicacao": "HIPERTENSÃO",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 0.4763,
+   "mediana": 0.5963,
+   "max": 1.523,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Espironolactona 25mg 30 comprimidos EMS Genérico",
+     "url": "https://www.drogasil.com.br/espironolactona-25mg-ems-generico-30-comprimidos.html",
+     "preco": 0.4763
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Espironolactona 25mg 30 comprimidos Eurofarma Genérico",
+     "url": "https://www.drogasil.com.br/espironolactona-25mg-eurofarma-generico-30-comprimidos.html",
+     "preco": 0.583
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Espironolactona 25mg 30 comprimidos Germed Genérico",
+     "url": "https://www.drogasil.com.br/espironolactona-germed-generico-25mg-30-comprimidos.html",
+     "preco": 0.5963
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Diacqua Espironolactona 25mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/diacqua-25mg-30-comprimidos.html",
+     "preco": 1.033
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Aldactone Espironolactona 25mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/aldactone-25-mg-30-comprimidos.html",
+     "preco": 1.523
+    }
+   ]
+  },
+  {
+   "produto": "FUROSEMIDA 40 MG",
+   "indicacao": "HIPERTENSÃO",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 0.369,
+   "mediana": 0.4736,
+   "max": 1.377,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Furosemida 40mg 20 comprimidos Neo Química Genérico",
+     "url": "https://www.drogasil.com.br/furosemida-40mg-neo-quimica-genericos-20-comprimidos.html",
+     "preco": 0.369
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Furosemida 40mg 30 comprimidos Neo Química Genérico",
+     "url": "https://www.drogasil.com.br/furosemida-40mg-30-comprimidos-neo-qumica-genrico.html",
+     "preco": 0.3963
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Furosemida 40mg 20 comprimidos Prati Donaduzzi Genérico",
+     "url": "https://www.drogasil.com.br/furosemida-40mg-prati-donaduzzi-genericos-com-20-comprimidos.html",
+     "preco": 0.4365
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Furosemida 40mg 30 comprimidos Aché Biosintética Genérico",
+     "url": "https://www.drogasil.com.br/furosemida-40-mg-biosintetica-genericos-30-comprimidos.html",
+     "preco": 0.4597
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Furosemida 40mg 20 comprimidos Teuto Genérico",
+     "url": "https://www.drogasil.com.br/furosemida-40-mg-teuto-genericos-20-comprimidos.html",
+     "preco": 0.4875
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Neosemid Furosemida 40mg 20 comprimidos",
+     "url": "https://www.drogasil.com.br/neosemid-40-mg-20-comprimidos.html",
+     "preco": 0.6095
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Diuremida Furosemida 40mg 20 comprimidos",
+     "url": "https://www.drogasil.com.br/diuremida-40mg-20-comprimidos.html",
+     "preco": 0.634
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Lasix Furosemida 40mg 20 comprimidos",
+     "url": "https://www.drogasil.com.br/lasix-40-mg-20-comprimidos.html",
+     "preco": 1.377
+    }
+   ]
+  },
+  {
+   "produto": "HIDROCLOROTIAZIDA 25MG",
+   "indicacao": "HIPERTENSÃO",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 0.0637,
+   "mediana": 0.1297,
+   "max": 0.5453,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Hidroclorotiazida 25mg 30 comprimidos Medley Genérico",
+     "url": "https://www.drogasil.com.br/hidroclorotiazida-25mg-medley-generico-30-comprimidos.html",
+     "preco": 0.0637
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Hidroclorotiazida 25mg 30 comprimidos Neo Química Genérico",
+     "url": "https://www.drogasil.com.br/hidrodoclorotizida-neoquimica-genericos-25-mg-30-comprimidos.html",
+     "preco": 0.0663
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Hidroclorotiazida 25mg 30 comprimidos EMS Genérico",
+     "url": "https://www.drogasil.com.br/hidroclorotiazida-25-mg-ems-generico-30-comprimidos.html",
+     "preco": 0.1297
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Hidroclorotiazida 25mg 30 comprimidos Cimed Genérico",
+     "url": "https://www.drogasil.com.br/hidroclorotiazida-25mg-cimed-genericos-30-comprimidos.html",
+     "preco": 0.1297
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Hidroclorotiazida 25mg 30 comprimidos Farmaco Prati Genérico",
+     "url": "https://www.drogasil.com.br/hidroclorotiazida-25-mg-farmaco-prati-generico-30-comprimidos.html",
+     "preco": 0.1597
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Diurix Hidroclorotiazida 25mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/diurix-25-mg-30-comprimidos.html",
+     "preco": 0.1683
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Clorana Hidroclorotiazida 25mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/clorana-25mg-30-comprimidos.html",
+     "preco": 0.5453
+    }
+   ]
+  },
+  {
+   "produto": "LOSARTANA POTÁSSICA 50MG",
+   "indicacao": "HIPERTENSÃO",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 0.131,
+   "mediana": 0.2763,
+   "max": 1.5847,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Losartana Potássica 50mg 30 comprimidos Medley Genérico",
+     "url": "https://www.drogasil.com.br/losartana-potassica-50mg-medley-generico-com-30-comprimidos.html",
+     "preco": 0.131
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Losartana Potássica 50mg 30 comprimidos Nova Química Genérico",
+     "url": "https://www.drogasil.com.br/losartana-potassica-50mg-nova-quimica-genericos-30-comprimidos-revestidos.html",
+     "preco": 0.1963
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Losartana Potássica 50mg 60 comprimidos Prati Donaduzzi Genérico",
+     "url": "https://www.drogasil.com.br/losartana-potassica-50mg-prati-generico-60-comprimidos-revestidos.html",
+     "preco": 0.1982
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Losartana Potássica 50mg 30 comprimidos Neo Química Genérico",
+     "url": "https://www.drogasil.com.br/losartana-potassica-neo-quimica-genericos-50-mg-30-comprimidos.html",
+     "preco": 0.2297
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Losartana Potássica 50mg 60 comprimidos Teuto Genérico",
+     "url": "https://www.drogasil.com.br/losartana-potassica-50mg.html",
+     "preco": 0.2415
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Losartana Potássica 50mg 30 comprimidos Prati Donaduzzi Genérico",
+     "url": "https://www.drogasil.com.br/losartana-potassica-50-mg-farmaco-prati-generico-30-comprimidos-revestidos.html",
+     "preco": 0.245
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Losartana Potássica 50mg caixa 30 comprimidos Pharlab Genérico",
+     "url": "https://www.drogasil.com.br/losartana-potassica-50mg-pharlab-genericos-30-comprimidos-revestidos.html",
+     "preco": 0.245
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Losartana Potássica 50mg 30 comprimidos Aché Genérico",
+     "url": "https://www.drogasil.com.br/losartana-potassica-50mg-biosintetica-generico-com-30-comprimidos-revestidos.html",
+     "preco": 0.2763
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Losartana Potássica 50mg 30 comprimidos EMS Genérico",
+     "url": "https://www.drogasil.com.br/losartana-potassica-50-mg-ems-generico-30-comprimidos.html",
+     "preco": 0.307
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Losartana Potássica 50mg 30 comprimidos Teuto Genérico",
+     "url": "https://www.drogasil.com.br/losartana-potassica-50-mg-teuto-generico-30-comprimidos-revestidos.html",
+     "preco": 0.34
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Aradois Losartana Potássica 50mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/aradois-50-mg-30-comprimidos.html",
+     "preco": 0.3997
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Zart Losartana Potássica 50mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/zart-50mg-30-comprimidos-revestidos.html",
+     "preco": 0.4097
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Corus Losartana Potássica 50mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/corus-50-mg-30-comprimidos-revestidos.html",
+     "preco": 0.433
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Aradois Losartana Potássica 50mg 60 comprimidos",
+     "url": "https://www.drogasil.com.br/aradois-50mg-60-comprimidos.html",
+     "preco": 0.5598
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Cozaar Losartana Potássica 50mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/cozaar-50-mg-30-comprimidos.html",
+     "preco": 1.5847
+    }
+   ]
+  },
+  {
+   "produto": "MALEATO DE ENALAPRIL 10MG",
+   "indicacao": "HIPERTENSÃO",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 0.1047,
+   "mediana": 0.4017,
+   "max": 1.0643,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Maleato de Enalapril 10mg 30 comprimidos Cimed Genérico",
+     "url": "https://www.drogasil.com.br/maleato-de-enalapril-10mg-cimed-genericos-com-30-comprimidos.html",
+     "preco": 0.1047
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Maleato de Enalapril 10mg 30 Comprimidos Nova Química Genérico",
+     "url": "https://www.drogasil.com.br/maleato-de-enalapril-10mg-nova-quimica-genericos-30-comprimidos.html",
+     "preco": 0.143
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Maleato de Enalapril 10mg 30 comprimidos EMS Genérico",
+     "url": "https://www.drogasil.com.br/maleato-de-enalapril-10mg-ems-genericos-com-30-comprimidos.html",
+     "preco": 0.1597
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Maleato de Enalapril 10mg 30 comprimidos Neo Química Genérico",
+     "url": "https://www.drogasil.com.br/maleato-de-enalapril-10mg-neoquimica-genericos-com-30-comprimidos.html",
+     "preco": 0.1663
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Maleato de Enalapril 10mg 30 comprimidos Legrand Genérico",
+     "url": "https://www.drogasil.com.br/maleato-de-enalapril-10mg-legrand-genericos-30-comprimidos.html",
+     "preco": 0.173
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Maleato de Enalapril 10mg 30 comprimidos Teuto Genérico",
+     "url": "https://www.drogasil.com.br/maleato-de-enalapril-10-mg-teuto-genericos-30-comprimidos.html",
+     "preco": 0.1863
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Renitec Maleato de Enalapril 10mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/renitec-10-mg-30-comprimidos.html",
+     "preco": 0.617
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Angiopril Maleato de Enalapril 10mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/angiopril-10mg.html",
+     "preco": 0.6597
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Renalapril Maleato de Enalapril 10mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/renalapril-10-mg-30-comprimidos.html",
+     "preco": 0.7497
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Vasopril Maleato de Enalapril 10mg 60 comprimidos",
+     "url": "https://www.drogasil.com.br/vasopril-10mg-60-comprimidos.html",
+     "preco": 0.9198
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Vasopril Maleato de Enalapril 10mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/vasopril-10-mg-30-comprimidos.html",
+     "preco": 0.9763
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Pressomede Maleato de Enalapril 10mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/pressomede-10mg-com-30-comprimidos.html",
+     "preco": 1.0643
+    }
+   ]
+  },
+  {
+   "produto": "SUCCINATO DE METOPROLOL 25 MG",
+   "indicacao": "HIPERTENSÃO",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 0.5663,
+   "mediana": 0.7817,
+   "max": 1.4803,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Succinato de Metoprolol 25mg 30 comprimidos Neo Química Genérico",
+     "url": "https://www.drogasil.com.br/succinato-de-metoprolol-25mg-neo-quimica-genericos-com-30-comprimidos.html",
+     "preco": 0.5663
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Succinato de Metoprolol 25mg 30 comprimidos Medley Genérico",
+     "url": "https://www.drogasil.com.br/succinato-de-metoprolol-25mg-medley-genericos-com-30-comprimidos-revestidos.html",
+     "preco": 0.6663
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Succinato de Metoprolol 25mg 30 Comprimidos Cimed Genérico",
+     "url": "https://www.drogasil.com.br/succinato-de-metoprolol-25mg-cimed-genericos-30-comprimidos.html",
+     "preco": 0.6697
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Quenzor Succinato de Metoprolol 25mg 30 cápsulas",
+     "url": "https://www.drogasil.com.br/quenzor-25mg-com-30-capsulas-dura-de-liberacao-prolongada.html",
+     "preco": 0.729
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Succinato de Metoprolol 25mg 30 comprimidos Biolab Genérico",
+     "url": "https://www.drogasil.com.br/succinato-de-metoprolol-25mg-biolab-genericos-com-30-comprimidos-revestidos.html",
+     "preco": 0.7663
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Succinato de Metoprolol 25mg 30 comprimidos Pharlab Genérico",
+     "url": "https://www.drogasil.com.br/succinato-de-metoprolol-25mg-pharlab-genericos-com-30-comprimidos-revestidos-de-liberacao-controlada.html",
+     "preco": 0.7817
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Succinato de Metoprolol 25mg 30 comprimidos Astrazeneca Genérico",
+     "url": "https://www.drogasil.com.br/succinato-de-metoprolol-25mg-medley-genericos-com-30-comprimidos.html",
+     "preco": 0.8393
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Selozok Succinato de Metoprolol 25mg 60 comprimidos",
+     "url": "https://www.drogasil.com.br/selozok-25-mg-60-comprimidos-de-liberacao-prolongada.html",
+     "preco": 0.8498
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Emprol XR Succinato de Metoprolol 25mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/emprol-xr-25mg-30-comprimidos.html",
+     "preco": 1.1957
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Dozoito Succinato de Metoprolol 25mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/dozoito-25mg-com-30-comprimidos-revestidos-de-liberacao-prolongada.html",
+     "preco": 1.2487
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Selozok Succinato de Metoprolol 25mg 30 comprimidos",
+     "url": "https://www.drogasil.com.br/selozok-25-mg-30-comprimidos-de-liberacao-prolongada.html",
+     "preco": 1.4803
+    }
+   ]
+  },
+  {
+   "produto": "FRALDA GERIÁTRICA",
+   "indicacao": "INCONTINÊNCIA URINÁRIA",
+   "modo": "caixa",
+   "unidade": "caixa/frasco",
+   "sem_preco": true,
+   "ofertas": []
+  },
+  {
+   "produto": "ALENDRONATO DE SÓDIO 70MG",
+   "indicacao": "OSTEOPOROSE",
+   "modo": "dose",
+   "unidade": "comprimidos",
+   "min": 3.0225,
+   "mediana": 3.5725,
+   "max": 20.765,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Alendronato de Sódio 70mg EMS 4 comprimidos - Genérico",
+     "url": "https://www.drogasil.com.br/alendronato-de-sodio-70mg-ems-generico-com-4-comprimidos.html",
+     "preco": 3.0225
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Alendronato de Sódio 70mg 4 comprimidos Teuto Genérico",
+     "url": "https://www.drogasil.com.br/alendronato-de-sodio-70mg-teuto-generico-com-4-comprimidos.html",
+     "preco": 3.2975
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Alendronato de Sódio 70mg Eurofarma 4 comprimidos - Genérico",
+     "url": "https://www.drogasil.com.br/alendronato-de-sodio-70mg-eurofarma-genericos-com-4-comprimidos.html",
+     "preco": 3.4475
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Alendronato de Sódio 70mg 4 comprimidos Germed Genérico",
+     "url": "https://www.drogasil.com.br/alendronato-de-sodio-70mg-germed-genericos-com-4-comprimidos.html",
+     "preco": 3.5725
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Alendronato de Sódio 70mg 4 comprimidos Sandoz Genérico",
+     "url": "https://www.drogasil.com.br/alendronato-sodico-70-mg-sandoz-genericos-4-comprimidos-revestidos.html",
+     "preco": 3.62
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Alendronato de Sódio 70mg 4 comprimidos Neo Química Genérico",
+     "url": "https://www.drogasil.com.br/alendronato-de-sodio-70mg-neo-quimica-genericos-com-4-comprimidos.html",
+     "preco": 4.3475
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Osteoform Alendronato de Sódio 70mg 4 comprimidos",
+     "url": "https://www.drogasil.com.br/osteoform-70-mg-4-comprimidos.html",
+     "preco": 20.765
+    }
+   ]
+  },
+  {
+   "produto": "BUDESONIDA 32MCG",
+   "indicacao": "RINITE",
+   "modo": "dose",
+   "unidade": "doses",
+   "min": 0.1832,
+   "mediana": 0.2495,
+   "max": 0.4005,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Budesonida 32mcg 120 doses EMS Genérico",
+     "url": "https://www.drogasil.com.br/budesonida-32mcg-ems-genericos-suspenso-spray-nasal-frasco-120-acionamentos.html",
+     "preco": 0.1832
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Inalajet Budesonida 32mcg Spray 120 doses",
+     "url": "https://www.drogasil.com.br/inalajet-suspensao-spray-32mcg-frasco-com-120-doses.html",
+     "preco": 0.2424
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Budesonida 32mcg Suspenção Nasal 120 Doses Aché Genérico",
+     "url": "https://www.drogasil.com.br/budesonida-32mcg-ache-genericos-spray-nasal-frasco-120-doses-1242744.html",
+     "preco": 0.2447
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Inalide Budesonida 32mcg Spray 120 doses",
+     "url": "https://www.drogasil.com.br/inalide-32mcg-spray-nasal-120-doses.html",
+     "preco": 0.2543
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Busonid Budesonida 32mcg Spray Nasal 120 doses 6ml",
+     "url": "https://www.drogasil.com.br/busonid-32mcg-suspensao-aquosa-nasal-aerosol-sem-conservantes-120-doses.html",
+     "preco": 0.2774
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Noex Budesonida 32mcg Spray Nasal 120 doses",
+     "url": "https://www.drogasil.com.br/noex-32-mcg-aerosol-120-doses.html",
+     "preco": 0.4005
+    }
+   ]
+  },
+  {
+   "produto": "BUDESONIDA 50MCG",
+   "indicacao": "RINITE",
+   "modo": "dose",
+   "unidade": "doses",
+   "min": 0.4071,
+   "mediana": 0.4071,
+   "max": 0.4071,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Busonid Budesonida 50mcg Spray Nasal 120 doses 6ml",
+     "url": "https://www.drogasil.com.br/busonid-50mgc-aquoso-nasal-aerosol-sem-conservantes-120-doses.html",
+     "preco": 0.4071
+    }
+   ]
+  },
+  {
+   "produto": "BUDESONIDA 50MCG - 200 DOSES",
+   "indicacao": "RINITE",
+   "modo": "dose",
+   "unidade": "doses",
+   "min": 0.3999,
+   "mediana": 0.3999,
+   "max": 0.3999,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Noex Budesonida 50mcg Spray Nasal Aerossol 200 doses",
+     "url": "https://www.drogasil.com.br/noex-50-mcg-aerosol-200-doses.html",
+     "preco": 0.3999
+    }
+   ]
+  },
+  {
+   "produto": "DIPROPIONATO DE BECLOMETASONA 0,05 MG",
+   "indicacao": "RINITE",
+   "modo": "dose",
+   "unidade": "doses",
+   "min": 0.1374,
+   "mediana": 0.2962,
+   "max": 0.4549,
+   "ofertas": [
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Clenil Nasal Aquoso Dipropionato de Beclometasona 50mcg Suspensão Aquosa 200 doses 26ml",
+     "url": "https://www.drogasil.com.br/clenil-50mcg-nasal-aquoso-spray-com-30ml.html",
+     "preco": 0.1374
+    },
+    {
+     "farmacia": "drogasil-recife",
+     "nome": "Beclosol Dipropionato de Beclometasona 50mcg Spray Nasal Aquoso 200 doses",
+     "url": "https://www.drogasil.com.br/beclosol-nasal-50-mcg-aerosol-aquoso-spray-com-200-doses.html",
+     "preco": 0.4549
+    }
+   ]
+  }
+ ]
+}
