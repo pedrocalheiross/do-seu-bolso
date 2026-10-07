@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Do Seu Bolso — quanto a Farmácia Popular economiza para você</title>
 <meta name="description" content="Sem Farmácia Popular, quanto vai sair do seu bolso? Marque seus remédios e veja quanto pagaria no balcão da farmácia.">
+<meta property="og:title" content="Sem Farmácia Popular, quanto vai sair do seu bolso?">
+<meta property="og:description" content="Marque seus remédios e veja quanto pagaria no balcão da farmácia.">
+<meta property="og:image" content="https://doseubolso.com.br/compartilhar.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sem Farmácia Popular, quanto vai sair do seu bolso? doseubolso.com.br">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,7 +85,13 @@
       <p class="so-cel">Mostre para quem também depende da Farmácia Popular.</p>
       <a class="btn" id="r-share" target="_blank" rel="noopener">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>
-        Compartilhar no WhatsApp</a>
+        Compartilhar</a>
+      <div class="mais so-pc">
+        <a class="borda" id="r-whats" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="borda" id="r-x" target="_blank" rel="noopener">Postar no X</a>
+        <a class="borda" id="r-link" href="https://doseubolso.com.br" aria-live="polite">Copiar link</a>
+        <a class="borda" id="r-baixar" href="#" download="do-seu-bolso.png">Baixar imagem</a>
+      </div>
       <a class="borda so-cel" id="r-outra" href="#calculadora">Calcular para outra pessoa</a>
     </div>
     <a class="link so-pc" href="termos.html">Como calculamos</a>
@@ -115,7 +128,11 @@ const doenca = (i) => APELIDO[i] || bonito(i);
 const semAcento = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 const mensal = (p, campo, qtd, freq) => p[campo] * qtd * VEZES_MES[freq];
 
+const LOGO = new Image();
+LOGO.src = 'favicon.png';
+
 let produtos = [];
+let atual = { itens: [], ano: 0 };
 let chip = 'Todos';
 let sel = {};
 try { sel = JSON.parse(localStorage.getItem('sel')) || {}; } catch {}
@@ -188,12 +205,84 @@ function resumo() {
       <div class="trilho"><div style="width: ${Math.max(2, x.ano / maior * 100)}%"></div></div>
       <span class="uso">${x.uso}</span></div>`).join('') : '<p>Marque um remédio para ver o cálculo.</p>';
   $('r-comp').hidden = !itens.length;
-  $('r-share').href = 'https://wa.me/?text=' + encodeURIComponent(`Sem a Farmácia Popular, meus remédios custariam ${brl(ano)} por ano no balcão da farmácia. Calcule o seu: ${SITE}`);
+  atual = { itens, ano };
+  $('r-share').href = $('r-whats').href = 'https://wa.me/?text=' + encodeURIComponent(mensagem());
+  $('r-x').href = 'https://x.com/intent/tweet?text=' + encodeURIComponent(mensagem());
 
   $('barra').innerHTML = `<div><span>Sem Farmácia Popular · ${itens.length} ${itens.length === 1 ? 'remédio' : 'remédios'}</span>
     <strong>${brl(ano)}<small> /ano</small></strong></div><a class="btn" href="#resultado">Ver
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>`;
 }
+
+const mensagem = () => `Sem a Farmácia Popular, meus remédios custariam ${brl(atual.ano)} por ano no balcão da farmácia. Calcule o seu: ${SITE}`;
+
+// Desenha o resultado como um comprovante (PNG). Síncrono para não perder o toque exigido pelo navigator.share.
+function comprovante() {
+  const { itens, ano } = atual;
+  const linhas = itens.slice(0, 8), resto = itens.length - linhas.length;
+  const W = 1080, X0 = 120, X1 = 960, TOPO = 240;
+  const H = TOPO + 602 + (linhas.length + (resto ? 1 : 0)) * 86 + 140;
+  const c = document.createElement('canvas');
+  c.width = W; c.height = H;
+  const g = c.getContext('2d');
+  const txt = (s, x, y, font, cor, al = 'left') => { g.font = font; g.fillStyle = cor; g.textAlign = al; g.fillText(s, x, y); };
+  const corta = (s, max) => { while (g.measureText(s).width > max && s.length > 4) s = s.slice(0, -2) + '…'; return s; };
+  const tracejado = (y) => { g.save(); g.setLineDash([12, 10]); g.strokeStyle = '#e7c9c9'; g.lineWidth = 3; g.beginPath(); g.moveTo(X0, y); g.lineTo(X1, y); g.stroke(); g.restore(); };
+  const NUN = "'Nunito Sans', system-ui, sans-serif", BAL = "'Baloo 2', system-ui, sans-serif";
+
+  g.fillStyle = '#C8161D'; g.fillRect(0, 0, W, H);
+  if (LOGO.complete && LOGO.naturalWidth) g.drawImage(LOGO, 60, 70, 104, 100);
+  txt('DO SEU BOLSO', 184, 145, `800 52px ${BAL}`, '#fff');
+  g.fillStyle = '#fff'; g.beginPath(); g.roundRect(60, TOPO, W - 120, H - TOPO - 140, 32); g.fill();
+
+  let y = TOPO + 90;
+  txt('COMPROVANTE · SEM FARMÁCIA POPULAR', X0, y, `800 26px ${NUN}`, '#B5121B');
+  txt('Meus remédios custariam, no balcão:', X0, y += 56, `400 34px ${NUN}`, '#1d1d1f');
+  txt(brl(ano), X0, y += 140, `800 136px ${BAL}`, '#B5121B');
+  txt(`por ano · ${brl(ano / 12)} por mês`, X0, y += 50, `700 32px ${NUN}`, '#1d1d1f');
+  tracejado(y += 44);
+  y += 16;
+  for (const x of linhas) {
+    g.font = `700 30px ${NUN}`;
+    txt(corta(bonito(x.p.produto), 560), X0, y += 46, g.font, '#1d1d1f');
+    txt(brl(x.ano) + '/ano', X1, y, `800 30px ${NUN}`, '#1d1d1f', 'right');
+    txt(x.uso, X0, y += 34, `400 24px ${NUN}`, '#5a5a5a');
+    y += 6;
+  }
+  if (resto) { txt(`+ ${resto} ${resto === 1 ? 'remédio' : 'remédios'}`, X0, y += 46, `700 30px ${NUN}`, '#5a5a5a'); y += 40; }
+  tracejado(y += 20);
+  txt('Em 4 anos', X0, y += 66, `700 32px ${NUN}`, '#1d1d1f');
+  txt(brl(ano * 4), X1, y, `800 36px ${NUN}`, '#1d1d1f', 'right');
+  txt('Com a Farmácia Popular', X0, y += 56, `800 32px ${NUN}`, '#1f6b2b');
+  txt('R$ 0', X1, y, `800 36px ${NUN}`, '#1f6b2b', 'right');
+  txt('Calcule o seu: doseubolso.com.br', W / 2, H - 58, `800 36px ${NUN}`, '#fff', 'center');
+
+  const bin = atob(c.toDataURL('image/png').split(',')[1]);
+  return new File([Uint8Array.from(bin, (ch) => ch.charCodeAt(0))], 'do-seu-bolso.png', { type: 'image/png' });
+}
+
+// Com suporte a arquivos (celular), abre o menu de compartilhar do sistema com a imagem;
+// sem suporte, segue o link do WhatsApp só com o texto.
+$('r-share').addEventListener('click', (e) => {
+  const dados = { files: [comprovante()], text: mensagem() };
+  if (!navigator.canShare?.(dados)) return;
+  e.preventDefault();
+  navigator.share(dados).catch(() => {});
+});
+$('r-link').addEventListener('click', (e) => {
+  e.preventDefault();
+  navigator.clipboard.writeText(SITE).then(() => {
+    e.target.textContent = 'Link copiado!';
+    setTimeout(() => { e.target.textContent = 'Copiar link'; }, 2000);
+  });
+});
+// O download usa o href no momento do clique, então dá para gerar a imagem aqui mesmo.
+// Libera a imagem do clique anterior; a atual fica viva até o download começar.
+$('r-baixar').addEventListener('click', (e) => {
+  const a = e.currentTarget;
+  if (a.href.startsWith('blob:')) URL.revokeObjectURL(a.href);
+  a.href = URL.createObjectURL(comprovante());
+});
 
 lista.addEventListener('click', (e) => {
   const b = e.target.closest('button[data-acao]');

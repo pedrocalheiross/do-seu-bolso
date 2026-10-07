@@ -29,6 +29,8 @@ for (const arq of fs.readdirSync('dados').filter((f) => f.endsWith('.xlsx'))) {
 
   // "resumo" traz o elenco inteiro, inclusive itens sem oferta.
   for (const r of ler('resumo')) {
+    // imagem_url vem dos sites das farmácias e vai direto para innerHTML no index.html.
+    assert(!r.imagem_url || /^https:\/\/[^"'<>\s]+$/.test(r.imagem_url), `imagem_url suspeita em ${arq}: ${r.imagem_url}`);
     produtos[r.produto] ??= { produto: r.produto, indicacao: r.indicacao, imagem_url: r.imagem_url || null, ofertas: [] };
     if (r.imagem_url) produtos[r.produto].imagem_url = r.imagem_url;
   }
@@ -37,8 +39,7 @@ for (const arq of fs.readdirSync('dados').filter((f) => f.endsWith('.xlsx'))) {
     if (o.no_programa !== 'sim' || o.disponivel_recife === 'não') continue;
     produtos[o.produto_programa] ??= { produto: o.produto_programa, indicacao: o.indicacao, imagem_url: null, ofertas: [] };
     produtos[o.produto_programa].ofertas.push({
-      farmacia, nome: o.nome, url: o.url, unidade: o.unidade,
-      preco_caixa: o.preco_1_unidade, preco_unidade: o.preco_por_unidade,
+      unidade: o.unidade, preco_caixa: o.preco_1_unidade, preco_unidade: o.preco_por_unidade,
     });
   }
 }
@@ -49,18 +50,16 @@ const saida = Object.values(produtos).map((p) => {
   // Anticoncepcional em cartela se compra por cartela/mês, não por comprimido/dia.
   const modo = POR_DOSE.includes(principal) && !/CARTELA/.test(p.produto) ? 'dose' : 'caixa';
   // ponytail: ofertas sem unidade (ex.: "drágeas") ficam fora do modo dose; parsear "apresentacao" se fizer falta.
-  const ofertas = p.ofertas
+  const precos = p.ofertas
     .filter((o) => (modo === 'dose' ? POR_DOSE.includes(o.unidade) && o.preco_unidade : o.preco_caixa))
-    .map((o) => ({ farmacia: o.farmacia, nome: o.nome, url: o.url, preco: arred(modo === 'dose' ? o.preco_unidade : o.preco_caixa) }))
-    .sort((a, b) => a.preco - b.preco);
-  const precos = ofertas.map((o) => o.preco);
+    .map((o) => arred(modo === 'dose' ? o.preco_unidade : o.preco_caixa))
+    .sort((a, b) => a - b);
   return {
     produto: p.produto, indicacao: p.indicacao, imagem_url: p.imagem_url || null, modo,
     unidade: modo === 'dose' ? principal : 'caixa/frasco',
     ...(precos.length
       ? { min: precos[0], mediana: arred(mediana(precos)), max: precos.at(-1) }
       : { sem_preco: true }),
-    ofertas,
   };
 }).sort((a, b) => a.indicacao.localeCompare(b.indicacao) || a.produto.localeCompare(b.produto));
 
