@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Do Seu Bolso — quanto a Farmácia Popular economiza para você</title>
 <meta name="description" content="Sem Farmácia Popular, quanto vai sair do seu bolso? Marque seus remédios e veja quanto pagaria no balcão da farmácia.">
-<link rel="icon" href="logo.png">
+<link rel="icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700;6..12,800&display=swap" rel="stylesheet">
@@ -29,9 +29,9 @@
     </div>
     <div class="cartao">
       <span class="rotulo">Exemplo real · Recife</span>
-      <span>Pressão + diabetes + colesterol + insulina custam, no balcão:</span>
-      <span class="grande" id="ex-4">R$ 5.098</span>
-      <span class="sub">em 4 anos <span id="ex-ano">· R$ 1.274 por ano</span></span>
+      <span>Diabetes com problema no coração + insulina + pressão + colesterol custam, no balcão:</span>
+      <span class="grande" id="ex-4">R$ 14.471</span>
+      <span class="sub">em 4 anos <span id="ex-ano">· R$ 3.618 por ano</span></span>
       <div class="ex-lista" id="ex-lista"></div>
       <span class="zero"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Com a Farmácia Popular: R$ 0</span>
     </div>
@@ -76,7 +76,7 @@
 
 <footer class="rodape">
   <div class="wrap">
-    <div><img src="logo.png" alt=""><span id="fonte">Preços de balcão das farmácias de Recife.</span></div>
+    <div><img src="favicon.png" alt=""><span id="fonte">Preços de balcão das farmácias de Recife.</span></div>
     <a href="termos.html">Como calculamos e termos de uso</a>
   </div>
 </footer>
@@ -90,7 +90,7 @@ const OPCOES = { dose: ['dia', 'semana', 'mes'], caixa: ['mes', 'tri'] };
 const PADRAO = { 'ALENDRONATO DE SÓDIO 70MG': 'semana', 'ACETATO DE MEDROXIPROGESTERONA 150MG': 'tri' };
 const APELIDO = { 'HIPERTENSÃO': 'Pressão alta', 'DISLIPIDEMIA': 'Colesterol', 'DIABETES MELLITUS + DOENÇA CARDIOVASCULAR': 'Diabetes + coração' };
 // Exemplo do topo: comprimidos por dia (insulina: caixas por mês).
-const EXEMPLO = { 'INSULINA HUMANA 100UI/ML': 1, 'CLORIDRATO DE METFORMINA 850MG': 2, 'SINVASTATINA 20MG': 1, 'LOSARTANA POTÁSSICA 50MG': 1 };
+const EXEMPLO = { 'DAPAGLIFLOZINA 10 MG': 1, 'INSULINA HUMANA 100UI/ML': 2, 'CLORIDRATO DE METFORMINA 850MG': 2, 'SINVASTATINA 40MG': 1, 'LOSARTANA POTÁSSICA 50MG': 2 };
 const SITE = 'https://doseubolso.com.br';
 const CHECK = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
 
@@ -206,7 +206,6 @@ lista.addEventListener('input', (e) => {
 
 lista.addEventListener('change', (e) => {
   const el = e.target.closest('.item');
-  if (!el) return;
   const p = produtos[el.dataset.i];
   if (e.target.dataset.acao === 'qtd') e.target.value = sel[p.produto].qtd;
   if (e.target.dataset.acao === 'per') {
