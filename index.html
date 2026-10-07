@@ -14,6 +14,7 @@
   input[type=search] { width: 100%; padding: .7rem; font-size: 1rem; border: 1px solid var(--borda); border-radius: 8px; }
   .item { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; justify-content: space-between;
           background: #fff; border: 1px solid var(--borda); border-radius: 8px; padding: .6rem .8rem; margin-bottom: .4rem; }
+  .item img { width: 56px; height: 56px; object-fit: contain; background: #fff; border-radius: 6px; }
   .item label { flex: 1 1 18rem; cursor: pointer; }
   .item.marcado { border-color: var(--verde); background: #f0faf5; }
   .qtd { display: flex; gap: .3rem; align-items: center; color: var(--cinza); font-size: .9rem; }
@@ -63,7 +64,8 @@ function render() {
       ? `<span class="qtd"><input type="number" min="0" step="any" data-i="${i}" data-k="qtd" value="${s?.qtd ?? 1}" aria-label="quantidade"> ${p.unidade} por
            <select data-i="${i}" data-k="periodo"><option value="dia">dia</option><option value="semana" ${s?.periodo === 'semana' ? 'selected' : ''}>semana</option></select></span>`
       : `<span class="qtd"><input type="number" min="0" step="any" data-i="${i}" data-k="qtd" value="${s?.qtd ?? 1}" aria-label="quantidade"> caixa/frasco por mês</span>`;
-    html += `<div class="item ${s ? 'marcado' : ''}">
+    const foto = p.imagem_url ? `<img src="${p.imagem_url}" alt="">` : '';
+    html += `<div class="item ${s ? 'marcado' : ''}">${foto}
       <label><input type="checkbox" data-i="${i}" ${s ? 'checked' : ''} ${p.sem_preco ? 'disabled' : ''}> ${p.produto}</label>${qtd}</div>`;
   });
   document.getElementById('lista').innerHTML = html || '<p>Nenhum remédio encontrado.</p>';

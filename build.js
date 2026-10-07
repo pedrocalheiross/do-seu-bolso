@@ -28,11 +28,14 @@ for (const arq of fs.readdirSync('dados').filter((f) => f.endsWith('.xlsx'))) {
   }
 
   // "resumo" traz o elenco inteiro, inclusive itens sem oferta.
-  for (const r of ler('resumo')) produtos[r.produto] ??= { produto: r.produto, indicacao: r.indicacao, ofertas: [] };
+  for (const r of ler('resumo')) {
+    produtos[r.produto] ??= { produto: r.produto, indicacao: r.indicacao, imagem_url: r.imagem_url || null, ofertas: [] };
+    if (r.imagem_url) produtos[r.produto].imagem_url = r.imagem_url;
+  }
 
   for (const o of ler('ofertas')) {
-    if (o.no_programa !== 'sim') continue;
-    produtos[o.produto_programa] ??= { produto: o.produto_programa, indicacao: o.indicacao, ofertas: [] };
+    if (o.no_programa !== 'sim' || o.disponivel_recife === 'não') continue;
+    produtos[o.produto_programa] ??= { produto: o.produto_programa, indicacao: o.indicacao, imagem_url: null, ofertas: [] };
     produtos[o.produto_programa].ofertas.push({
       farmacia, nome: o.nome, url: o.url, unidade: o.unidade,
       preco_caixa: o.preco_1_unidade, preco_unidade: o.preco_por_unidade,
@@ -52,7 +55,7 @@ const saida = Object.values(produtos).map((p) => {
     .sort((a, b) => a.preco - b.preco);
   const precos = ofertas.map((o) => o.preco);
   return {
-    produto: p.produto, indicacao: p.indicacao, modo,
+    produto: p.produto, indicacao: p.indicacao, imagem_url: p.imagem_url || null, modo,
     unidade: modo === 'dose' ? principal : 'caixa/frasco',
     ...(precos.length
       ? { min: precos[0], mediana: arred(mediana(precos)), max: precos.at(-1) }
