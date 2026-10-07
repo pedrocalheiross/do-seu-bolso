@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Do Seu Bolso — quanto a Farmácia Popular economiza para você</title>
+<style>
+  :root { --verde: #0a7a4f; --cinza: #666; --borda: #ddd; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.4 system-ui, sans-serif; color: #222; background: #fafafa; }
+  main { max-width: 760px; margin: 0 auto; padding: 1rem 1rem 12rem; }
+  h1 { color: var(--verde); margin-bottom: .25rem; }
+  h2 { font-size: 1rem; margin: 1.5rem 0 .5rem; color: var(--cinza); letter-spacing: .05em; }
+  input[type=search] { width: 100%; padding: .7rem; font-size: 1rem; border: 1px solid var(--borda); border-radius: 8px; }
+  .item { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; justify-content: space-between;
+          background: #fff; border: 1px solid var(--borda); border-radius: 8px; padding: .6rem .8rem; margin-bottom: .4rem; }
+  .item label { flex: 1 1 18rem; cursor: pointer; }
+  .item.marcado { border-color: var(--verde); background: #f0faf5; }
+  .qtd { display: flex; gap: .3rem; align-items: center; color: var(--cinza); font-size: .9rem; }
+  .qtd input { width: 4.5rem; padding: .3rem; }
+  .sem { color: var(--cinza); font-size: .85rem; }
+  #resumo { position: fixed; left: 0; right: 0; bottom: 0; background: var(--verde); color: #fff;
+            padding: .8rem 1rem calc(.8rem + env(safe-area-inset-bottom, 0px)); }
+  #resumo > div { max-width: 760px; margin: 0 auto; }
+  #resumo strong { font-size: 1.4rem; }
+  #resumo small { opacity: .85; }
+  #detalhe { max-height: 30vh; overflow: auto; font-size: .85rem; }
+  #detalhe a { color: #fff; }
+  footer { color: var(--cinza); font-size: .85rem; margin-top: 2rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Do Seu Bolso</h1>
+  <p>Marque os remédios que você retira na <b>Farmácia Popular</b> e veja quanto pagaria por eles numa farmácia comum.</p>
+  <input type="search" id="busca" placeholder="Buscar remédio (ex.: losartana)" aria-label="Buscar remédio">
+  <div id="lista">Carregando…</div>
+  <footer id="fonte"></footer>
+</main>
+<section id="resumo" aria-live="polite"><div>Marque um remédio para ver o cálculo.</div></section>
+
+<script>
+const brl = (v) => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+const DIAS_MES = 30;
+let produtos = [];
+let sel = {};
+try { sel = JSON.parse(localStorage.getItem('sel')) || {}; } catch {}
+
+// Gasto mensal de um item: preço × quantidade no mês.
+function mensal(p, s, campo) {
+  const vezes = p.modo === 'dose' ? s.qtd * (s.periodo === 'semana' ? DIAS_MES / 7 : DIAS_MES) : s.qtd;
+  return p[campo] * vezes;
+}
+
+function render() {
+  const termo = document.getElementById('busca').value.toLowerCase();
+  let html = '', grupo = '';
+  produtos.forEach((p, i) => {
+    if (termo && !p.produto.toLowerCase().includes(termo) && !p.indicacao.toLowerCase().includes(termo)) return;
+    if (p.indicacao !== grupo) html += `<h2>${grupo = p.indicacao}</h2>`;
+    const s = sel[p.produto];
+    const qtd = p.sem_preco ? '<span class="sem">sem preço coletado</span>' : p.modo === 'dose'
+      ? `<span class="qtd"><input type="number" min="0" step="any" data-i="${i}" data-k="qtd" value="${s?.qtd ?? 1}" aria-label="quantidade"> ${p.unidade} por
+           <select data-i="${i}" data-k="periodo"><option value="dia">dia</option><option value="semana" ${s?.periodo === 'semana' ? 'selected' : ''}>semana</option></select></span>`
+      : `<span class="qtd"><input type="number" min="0" step="any" data-i="${i}" data-k="qtd" value="${s?.qtd ?? 1}" aria-label="quantidade"> caixa/frasco por mês</span>`;
+    html += `<div class="item ${s ? 'marcado' : ''}">
+      <label><input type="checkbox" data-i="${i}" ${s ? 'checked' : ''} ${p.sem_preco ? 'disabled' : ''}> ${p.produto}</label>${qtd}</div>`;
+  });
+  document.getElementById('lista').innerHTML = html || '<p>Nenhum remédio encontrado.</p>';
+  resumo();
+}
+
+function resumo() {
+  try { localStorage.setItem('sel', JSON.stringify(sel)); } catch {}
+  const itens = produtos.filter((p) => sel[p.produto] && !p.sem_preco);
+  const box = document.querySelector('#resumo > div');
+  if (!itens.length) { box.textContent = 'Marque um remédio para ver o cálculo.'; return; }
+  const total = (c) => itens.reduce((t, p) => t + mensal(p, sel[p.produto], c), 0);
+  const [min, med, max] = ['min', 'mediana', 'max'].map(total);
+  box.innerHTML = `Sem a Farmácia Popular você gastaria cerca de<br>
+    <strong>${brl(med)}/mês</strong> · <strong>${brl(med * 12)}/ano</strong><br>
+    <small>de ${brl(min)} a ${brl(max)} por mês (${brl(min * 12)} a ${brl(max * 12)} por ano), conforme marca e farmácia</small>
+    <details id="detalhe"><summary>Ver por remédio</summary>${itens.map((p) =>
+      `<div>${p.produto}: ${brl(mensal(p, sel[p.produto], 'mediana'))}/mês — mais barato:
+       <a href="${p.ofertas[0].url}" target="_blank" rel="noopener">${p.ofertas[0].nome}</a> (${p.ofertas[0].farmacia})</div>`).join('')}
+    </details>`;
+}
+
+document.getElementById('lista').addEventListener('input', (e) => {
+  const p = produtos[e.target.dataset.i];
+  if (!p) return;
+  if (e.target.type === 'checkbox') {
+    if (e.target.checked) {
+      const linha = e.target.closest('.item');
+      sel[p.produto] = { qtd: +(linha.querySelector('[data-k=qtd]')?.value || 1), periodo: linha.querySelector('select')?.value || 'dia' };
+    } else delete sel[p.produto];
+    e.target.closest('.item').classList.toggle('marcado', e.target.checked);
+  } else if (sel[p.produto]) {
+    sel[p.produto][e.target.dataset.k] = e.target.dataset.k === 'qtd' ? Math.max(0, +e.target.value || 0) : e.target.value;
+  }
+  resumo();
+});
+document.getElementById('busca').addEventListener('input', render);
+
+fetch('precos.json').then((r) => r.json()).then((d) => {
+  produtos = d.produtos;
+  document.getElementById('fonte').innerHTML = `Na Farmácia Popular esses itens saem por <b>R$ 0</b>.
+    Preços de balcão: ${d.fontes.map((f) => f.nota).join(' ')} Gerado em ${d.gerado_em}. Mês = ${DIAS_MES} dias.`;
+  render();
+}).catch(() => { document.getElementById('lista').textContent = 'Não foi possível carregar os preços.'; });
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "do-seu-bolso",
+  "version": "1.0.0",
+  "description": "Calculadora de Impacto da Farmacia Popular",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrocalheiross/do-seu-bolso.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrocalheiross/do-seu-bolso/issues"
+  },
+  "homepage": "https://github.com/pedrocalheiross/do-seu-bolso#readme",
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}
