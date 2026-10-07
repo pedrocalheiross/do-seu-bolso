@@ -1,0 +1,126 @@
+:root {
+  --vermelho: #C8161D; --vermelho-escuro: #B5121B; --amarelo: #FFD21F; --azul: #1E3F8F;
+  --creme: #FFF8F0; --tinta: #1d1d1f; --cinza: #5a5a5a; --borda: #efe3d6; --borda-forte: #e2d4c4; --verde: #1f6b2b;
+}
+* { box-sizing: border-box; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+body { margin: 0; font: 16px/1.45 'Nunito Sans', system-ui, sans-serif; color: var(--tinta); background: var(--creme); }
+h1, h2, .marca, .btn, .grande, .kicker { font-family: 'Baloo 2', system-ui, sans-serif; font-weight: 800; }
+a { color: var(--azul); }
+:focus-visible { outline: 3px solid #3B57A6; outline-offset: 2px; }
+.wrap { max-width: 1200px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+@media (min-width: 700px) { .wrap { padding-left: 32px; padding-right: 32px; } }
+
+/* Topo vermelho com a marca */
+.topo { background: var(--vermelho); color: #fff; }
+.barra { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 24px; padding-top: 12px; padding-bottom: 12px; }
+.marca { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-size: 22px; }
+.marca img, .rodape img { width: 48px; height: 48px; object-fit: cover; object-position: top; }
+.barra nav { display: flex; flex-wrap: wrap; gap: 0 24px; }
+.barra nav a { color: #fff; font-weight: 700; padding: 12px 0; }
+@media (max-width: 699px) {
+  .barra { column-gap: 12px; }
+  .marca { font-size: 20px; }
+  .marca img { width: 44px; height: 44px; }
+  .barra nav a { font-size: 14px; }
+}
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 60px; padding: 0 28px; border-radius: 16px; border: 0;
+  background: var(--amarelo); color: var(--tinta); font-size: 22px; text-decoration: none; cursor: pointer; }
+
+/* Início */
+.hero { display: flex; flex-wrap: wrap; align-items: center; gap: 28px 48px; padding-top: 16px; padding-bottom: 48px; }
+.hero-texto { flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
+.hero h1 { margin: 0; font-size: clamp(40px, 6vw, 80px); line-height: .95; color: var(--amarelo); text-transform: uppercase; }
+.hero p { margin: 0; font-size: clamp(18px, 2vw, 20px); max-width: 560px; }
+.cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+.cartao { flex: 1 1 340px; min-width: 0; background: #fff; color: var(--tinta); border-radius: 24px; padding: 24px; display: flex; flex-direction: column; gap: 6px; }
+.rotulo { font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--vermelho-escuro); }
+.cartao .grande { font-size: clamp(64px, 8vw, 104px); line-height: .95; color: var(--vermelho-escuro); margin-top: 4px; }
+.cartao .sub { font-size: 17px; font-weight: 700; }
+.cartao .sub span { font-weight: 400; color: var(--cinza); }
+.ex-lista { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; padding-top: 16px; border-top: 1px dashed #e7c9c9; font-size: 15px; }
+.ex-lista div { display: flex; justify-content: space-between; gap: 12px; }
+.zero { display: flex; align-items: center; gap: 8px; margin-top: 8px; font-size: 18px; font-weight: 800; color: var(--verde); }
+@media (max-width: 699px) { .ex-lista { display: none; } .cta .btn { width: 100%; } }
+
+/* Calculadora */
+.calc { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 32px; padding-top: 32px; padding-bottom: 48px; scroll-margin-top: 8px; }
+.calc > section { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+.calc h2 { margin: 0; font-size: clamp(28px, 4vw, 40px); line-height: 1.05; }
+.calc > section > p { margin: 0; font-size: 17px; color: #4a4a4a; }
+.busca { display: flex; align-items: center; gap: 10px; background: #fff; border: 2px solid var(--borda-forte); border-radius: 14px; padding: 0 16px; height: 56px; max-width: 560px; }
+.busca:focus-within { outline: 3px solid #3B57A6; outline-offset: 2px; }
+.busca input { border: 0; outline: 0; flex: 1; min-width: 0; font: inherit; font-size: 17px; background: transparent; }
+.chips { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+@media (min-width: 960px) { .chips { flex-wrap: wrap; overflow: visible; } }
+.chips button { flex: none; min-height: 44px; padding: 0 16px; border-radius: 22px; border: 2px solid var(--borda-forte); background: #fff; color: var(--tinta);
+  font: inherit; font-weight: 800; font-size: 15px; cursor: pointer; }
+.chips button[aria-pressed="true"] { background: var(--azul); border-color: var(--azul); color: #fff; }
+.lista { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 12px; align-items: start; }
+
+.item { background: #fff; border: 2px solid var(--borda); border-radius: 16px; padding: 12px 14px; }
+.item.marcado { border-color: var(--vermelho); }
+.toggle { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 56px; border: 0; background: none; padding: 0; text-align: left; font: inherit; color: inherit; cursor: pointer; }
+.toggle:disabled { cursor: default; opacity: .6; }
+.caixa { flex: none; width: 28px; height: 28px; border-radius: 8px; border: 2px solid #8a8a8a; display: flex; align-items: center; justify-content: center; }
+.marcado .caixa { background: var(--vermelho); border-color: var(--vermelho); }
+.toggle img { flex: none; width: 48px; height: 48px; object-fit: contain; border-radius: 8px; }
+.toggle .txt { display: flex; flex-direction: column; min-width: 0; }
+.toggle b { font-size: 17px; line-height: 1.2; }
+.toggle small { font-size: 14px; color: var(--cinza); }
+.ctrl { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #e7c9c9; }
+.qtd-col { display: flex; flex-direction: column; gap: 6px; }
+.stepper { display: flex; align-items: center; width: max-content; height: 48px; border: 2px solid var(--vermelho); border-radius: 24px; background: #fff; overflow: hidden; }
+.stepper:focus-within { outline: 3px solid #3B57A6; outline-offset: 2px; }
+.stepper button { width: 44px; height: 44px; border: 0; background: none; color: var(--vermelho); font-size: 24px; font-weight: 800; cursor: pointer; }
+.stepper button:last-child { background: var(--vermelho); color: #fff; }
+.stepper input { width: 52px; height: 44px; border: 0; outline: 0; background: none; text-align: center; font: inherit; font-size: 20px; font-weight: 800; color: var(--tinta); }
+.ctrl select { height: 44px; border: 2px solid var(--borda-forte); border-radius: 12px; background: #fff; color: var(--tinta); font: inherit; font-size: 15px; font-weight: 700; padding: 0 8px; }
+.mes { text-align: right; font-size: 13px; color: var(--cinza); line-height: 1.2; }
+.mes b { font-size: 17px; color: var(--vermelho-escuro); }
+
+/* Resultado: ao lado da lista no computador, depois dela no celular */
+.painel { flex: 1 1 340px; min-width: 0; background: var(--azul); color: #fff; border-radius: 24px; padding: 24px; display: flex; flex-direction: column; gap: 16px; scroll-margin-top: 16px; }
+@media (min-width: 960px) { .painel { position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; } }
+.painel p { margin: 0; }
+.kicker { font-size: 20px; line-height: 1.1; text-transform: uppercase; }
+.painel .grande { display: block; font-size: clamp(56px, 7vw, 72px); line-height: .95; color: var(--amarelo); }
+.painel .sub { font-size: 18px; font-weight: 700; }
+.dupla { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.dupla div { display: flex; flex-direction: column; background: rgba(255, 255, 255, .1); border-radius: 14px; padding: 12px 14px; font-size: 13px; }
+.dupla b { font-family: 'Baloo 2', system-ui, sans-serif; font-size: 26px; line-height: 1.1; }
+.dupla div:first-child b { color: var(--amarelo); }
+.por { display: flex; flex-direction: column; gap: 12px; border-top: 1px solid rgba(255, 255, 255, .25); padding-top: 16px; }
+.por h3 { margin: 0; font-size: 15px; }
+.linha { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; font-weight: 800; }
+.linha span:last-child { color: var(--amarelo); white-space: nowrap; }
+.trilho { height: 10px; border-radius: 6px; background: rgba(255, 255, 255, .18); margin-top: 6px; }
+.trilho div { height: 100%; border-radius: 6px; background: var(--amarelo); }
+.uso { font-size: 13px; }
+.painel .btn { min-height: 56px; padding: 0 12px; font-size: 18px; }
+.painel .link { color: #fff; font-weight: 700; font-size: 14px; text-align: center; padding: 8px 0; }
+
+/* Total fixo embaixo, só no celular */
+.barra-total { position: fixed; left: 0; right: 0; bottom: 0; display: flex; align-items: center; gap: 12px; background: var(--azul); color: #fff;
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)); border-radius: 22px 22px 0 0; }
+.barra-total[hidden] { display: none; }
+.barra-total div { flex: 1; display: flex; flex-direction: column; font-size: 13px; }
+.barra-total strong { font-family: 'Baloo 2', system-ui, sans-serif; font-size: 28px; line-height: 1.05; color: var(--amarelo); }
+.barra-total strong small { font-size: 16px; color: #fff; }
+.barra-total .btn { min-height: 52px; padding: 0 20px; font-size: 19px; }
+@media (min-width: 960px) { .barra-total { display: none; } }
+@media (max-width: 959px) { body:has(.barra-total:not([hidden])) { padding-bottom: 96px; } }
+
+/* Rodapé */
+.rodape { background: var(--azul); color: #fff; }
+.rodape .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 16px; padding-top: 24px; padding-bottom: 24px; }
+.rodape .wrap > div { display: flex; align-items: center; gap: 12px; font-size: 15px; }
+.rodape img { width: 40px; height: 40px; }
+.rodape a { color: #fff; font-weight: 700; padding: 12px 0; }
+
+/* Termos */
+.doc { max-width: 760px; padding-top: 32px; padding-bottom: 48px; display: flex; flex-direction: column; gap: 28px; font-size: 17px; line-height: 1.55; }
+.doc h1 { margin: 0; font-size: clamp(32px, 5vw, 48px); line-height: 1.05; }
+.doc h2 { margin: 0 0 8px; font-size: 24px; color: var(--vermelho-escuro); }
+.doc p { margin: 0 0 10px; }
