@@ -65,13 +65,12 @@ a { color: var(--azul); }
 .toggle .txt { display: flex; flex-direction: column; min-width: 0; }
 .toggle b { font-size: 17px; line-height: 1.2; }
 .toggle small { font-size: 14px; color: var(--cinza); }
-.ctrl { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #e7c9c9; }
-.qtd-col { display: flex; flex-direction: column; gap: 6px; }
+.ctrl { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #e7c9c9; }
 .stepper { display: flex; align-items: center; width: max-content; height: 48px; box-shadow: inset 0 0 0 2px var(--vermelho); border-radius: 24px; background: #fff; overflow: hidden; }
 .stepper button { width: 46px; height: 100%; border: 0; background: none; color: var(--vermelho); font-size: 24px; font-weight: 800; cursor: pointer; }
 .stepper button:last-child { background: var(--vermelho); color: #fff; }
 .stepper input { width: 52px; height: 100%; border: 0; outline: 0; background: none; text-align: center; font: inherit; font-size: 20px; font-weight: 800; color: var(--tinta); }
-.ctrl select { height: 44px; border: 2px solid var(--borda-forte); border-radius: 12px; background: #fff; color: var(--tinta); font: inherit; font-size: 15px; font-weight: 700; padding: 0 8px; }
+.ctrl select { order: 1; width: 100%; height: 44px; border: 2px solid var(--borda-forte); border-radius: 12px; background: #fff; color: var(--tinta); font: inherit; font-size: 15px; font-weight: 700; padding: 0 8px; }
 .mes { text-align: right; font-size: 13px; color: var(--cinza); line-height: 1.2; }
 .mes b { font-size: 17px; color: var(--vermelho-escuro); }
 
