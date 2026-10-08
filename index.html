@@ -35,12 +35,10 @@
       </div>
     </div>
     <div class="cartao">
-      <span class="rotulo">Exemplo real · Recife</span>
-      <span>Diabetes com problema no coração + insulina + pressão + colesterol custam, no balcão:</span>
-      <span class="grande" id="ex-4">R$ 14.471</span>
-      <span class="sub">em 4 anos <span id="ex-ano">· R$ 3.618 por ano</span></span>
-      <div class="ex-lista" id="ex-lista"></div>
-      <span class="zero"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Com a Farmácia Popular: R$ 0</span>
+      <p class="destaque">Só um candidato a presidente se compromete a manter a Farmácia Popular como está.</p>
+      <p>Foi no governo Lula e Alckmin que todos os remédios do programa passaram a ser de graça.</p>
+      <p>No governo Bolsonaro, a lista de remédios era menor, e a proposta de orçamento para 2023 cortou 59% da verba do programa.</p>
+      <strong>Vote consciente!</strong>
     </div>
   </section>
 </header>
@@ -68,13 +66,14 @@
       </div>
       <p class="kicker">Sem Farmácia Popular, vai sair do seu bolso</p>
       <div>
-        <strong class="grande" id="r-ano" aria-live="polite">R$ 0</strong>
-        <span class="sub" id="r-mes">por ano · R$ 0 por mês</span>
+        <strong class="grande" id="r-4" aria-live="polite">R$ 0</strong>
+        <span class="sub">em 4 anos</span>
       </div>
       <p id="r-max" hidden></p>
+      <p>4 anos é o tempo de um mandato. Quem você eleger decide se esse valor sai do seu bolso.</p>
     </div>
     <div class="dupla">
-      <div>Em 4 anos<b id="r-4">R$ 0</b></div>
+      <div>Por ano<b id="r-ano">R$ 0</b><span id="r-mes">R$ 0 por mês</span></div>
       <div>Com a Farmácia Popular<b>R$ 0</b></div>
     </div>
     <div class="por">
@@ -82,7 +81,7 @@
       <div id="r-por"></div>
     </div>
     <div class="comp" id="r-comp" hidden>
-      <p class="so-cel">Mostre para quem também depende da Farmácia Popular.</p>
+      <p class="so-cel">Divulgue o impacto da Farmácia Popular.</p>
       <a class="btn" id="r-share" target="_blank" rel="noopener">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>
         Compartilhar</a>
@@ -92,8 +91,8 @@
         <a class="borda" id="r-link" href="https://doseubolso.com.br" aria-live="polite">Copiar link</a>
         <a class="borda" id="r-baixar" href="#" download="do-seu-bolso.png">Baixar imagem</a>
       </div>
-      <a class="borda so-cel" id="r-outra" href="#calculadora">Calcular para outra pessoa</a>
     </div>
+    <a class="borda so-cel" id="r-outra" href="#calculadora">Calcular novamente</a>
     <a class="link so-pc" href="termos.html">Como calculamos</a>
     <p class="nota so-cel"><span class="fonte">Valores estimados com preços de balcão em Recife.</span> <a href="termos.html">Como calculamos e termos de uso</a></p>
   </aside>
@@ -116,8 +115,6 @@ const ROTULO = { dia: 'por dia', semana: 'por semana', mes: 'por mês', tri: 'a 
 const OPCOES = { dose: ['dia', 'semana', 'mes'], caixa: ['mes', 'tri'] };
 const PADRAO = { 'ALENDRONATO DE SÓDIO 70MG': 'semana', 'ACETATO DE MEDROXIPROGESTERONA 150MG': 'tri' };
 const APELIDO = { 'HIPERTENSÃO': 'Pressão alta', 'DISLIPIDEMIA': 'Colesterol', 'DIABETES MELLITUS + DOENÇA CARDIOVASCULAR': 'Diabetes + coração' };
-// Exemplo do topo: comprimidos por dia (insulina: caixas por mês).
-const EXEMPLO = { 'DAPAGLIFLOZINA 10 MG': 1, 'INSULINA HUMANA 100UI/ML': 2, 'CLORIDRATO DE METFORMINA 850MG': 2, 'SINVASTATINA 40MG': 1, 'LOSARTANA POTÁSSICA 50MG': 2 };
 const SITE = 'https://doseubolso.com.br';
 const CHECK = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
 
@@ -185,6 +182,20 @@ function trocar(el, foco) {
   novo.querySelector(`[data-acao="${foco}"]`)?.focus();
 }
 
+// Os números do resultado sobem do valor que está na tela até o novo.
+function sobe(el, fim, de = el.mostrado || 0) {
+  cancelAnimationFrame(el.quadro);
+  const t0 = performance.now(), dur = matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 900;
+  const passo = () => {
+    const k = dur ? Math.min(1, (performance.now() - t0) / dur) : 1;
+    el.mostrado = de + (fim - de) * (1 - (1 - k) ** 3);
+    el.textContent = brl(el.mostrado);
+    el.setAttribute('aria-busy', k < 1);
+    if (k < 1) el.quadro = requestAnimationFrame(passo);
+  };
+  passo();
+}
+
 function resumo() {
   try { localStorage.setItem('sel', JSON.stringify(sel)); } catch {}
   const itens = produtos.filter((p) => sel[p.produto]).map((p) => {
@@ -195,11 +206,11 @@ function resumo() {
   const max = itens.reduce((t, x) => t + x.max, 0);
   const maior = itens[0]?.ano || 1;
 
-  $('r-ano').textContent = brl(ano);
-  $('r-mes').textContent = `por ano · ${brl(ano / 12)} por mês`;
-  $('r-4').textContent = brl(ano * 4);
+  sobe($('r-4'), ano * 4);
+  sobe($('r-ano'), ano);
+  $('r-mes').textContent = `${brl(ano / 12)} por mês`;
   $('r-max').hidden = max <= ano;
-  $('r-max').innerHTML = `Comprando a marca mais cara, pode passar de <b>${brl(max)} por ano</b>.`;
+  $('r-max').innerHTML = `Comprando a marca mais cara, pode passar de <b>${brl(max * 4)}</b>.`;
   $('r-por').innerHTML = itens.length ? itens.map((x) => `<div>
       <div class="linha"><span>${bonito(x.p.produto)}</span><span>${brl(x.ano)}</span></div>
       <div class="trilho"><div style="width: ${Math.max(2, x.ano / maior * 100)}%"></div></div>
@@ -214,14 +225,14 @@ function resumo() {
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>`;
 }
 
-const mensagem = () => `Sem a Farmácia Popular, meus remédios custariam ${brl(atual.ano)} por ano no balcão da farmácia. Calcule o seu: ${SITE}`;
+const mensagem = () => `Sem a Farmácia Popular, meus remédios custariam ${brl(atual.ano * 4)} em 4 anos no balcão da farmácia. Vote consciente! Calcule o seu: ${SITE}`;
 
 // Desenha o resultado como um comprovante (PNG). Síncrono para não perder o toque exigido pelo navigator.share.
 function comprovante() {
   const { itens, ano } = atual;
   const linhas = itens.slice(0, 8), resto = itens.length - linhas.length;
   const W = 1080, X0 = 120, X1 = 960, TOPO = 240;
-  const H = TOPO + 602 + (linhas.length + (resto ? 1 : 0)) * 86 + 140;
+  const H = TOPO + 756 + (linhas.length + (resto ? 1 : 0)) * 86 + 140;
   const c = document.createElement('canvas');
   c.width = W; c.height = H;
   const g = c.getContext('2d');
@@ -238,8 +249,8 @@ function comprovante() {
   let y = TOPO + 90;
   txt('COMPROVANTE · SEM FARMÁCIA POPULAR', X0, y, `800 26px ${NUN}`, '#B5121B');
   txt('Meus remédios custariam, no balcão:', X0, y += 56, `400 34px ${NUN}`, '#1d1d1f');
-  txt(brl(ano), X0, y += 140, `800 136px ${BAL}`, '#B5121B');
-  txt(`por ano · ${brl(ano / 12)} por mês`, X0, y += 50, `700 32px ${NUN}`, '#1d1d1f');
+  txt(brl(ano * 4), X0, y += 140, `800 136px ${BAL}`, '#B5121B');
+  txt('em 4 anos', X0, y += 50, `700 32px ${NUN}`, '#1d1d1f');
   tracejado(y += 44);
   y += 16;
   for (const x of linhas) {
@@ -251,10 +262,13 @@ function comprovante() {
   }
   if (resto) { txt(`+ ${resto} ${resto === 1 ? 'remédio' : 'remédios'}`, X0, y += 46, `700 30px ${NUN}`, '#5a5a5a'); y += 40; }
   tracejado(y += 20);
-  txt('Em 4 anos', X0, y += 66, `700 32px ${NUN}`, '#1d1d1f');
-  txt(brl(ano * 4), X1, y, `800 36px ${NUN}`, '#1d1d1f', 'right');
+  txt('Por ano', X0, y += 66, `700 32px ${NUN}`, '#1d1d1f');
+  txt(brl(ano), X1, y, `800 36px ${NUN}`, '#1d1d1f', 'right');
+  txt(`${brl(ano / 12)} por mês`, X0, y += 34, `400 24px ${NUN}`, '#5a5a5a');
   txt('Com a Farmácia Popular', X0, y += 56, `800 32px ${NUN}`, '#1f6b2b');
   txt('R$ 0', X1, y, `800 36px ${NUN}`, '#1f6b2b', 'right');
+  g.fillStyle = '#C8161D'; g.beginPath(); g.roundRect(X0, y += 40, X1 - X0, 96, 24); g.fill();
+  txt('VOTE CONSCIENTE!', W / 2, y + 68, `800 56px ${BAL}`, '#FFD21F', 'center');
   txt('Calcule o seu: doseubolso.com.br', W / 2, H - 58, `800 36px ${NUN}`, '#fff', 'center');
 
   const bin = atob(c.toDataURL('image/png').split(',')[1]);
@@ -326,6 +340,10 @@ $('chips').addEventListener('click', (e) => {
   render();
 });
 $('busca').addEventListener('input', render);
+// No celular o resultado é uma tela própria: ao abrir, os números sobem do zero.
+addEventListener('hashchange', () => {
+  if (location.hash === '#resultado') { sobe($('r-4'), atual.ano * 4, 0); sobe($('r-ano'), atual.ano, 0); }
+});
 $('r-outra').addEventListener('click', () => { sel = {}; render(); resumo(); });
 
 fetch('precos.json').then((r) => r.json()).then((d) => {
@@ -336,13 +354,6 @@ fetch('precos.json').then((r) => r.json()).then((d) => {
     else sel[k].qtd = Math.min(999, +sel[k].qtd || 0);
   }
 
-  const ex = produtos.filter((p) => EXEMPLO[p.produto] && !p.sem_preco)
-    .map((p) => ({ p, ano: mensal(p, 'mediana', EXEMPLO[p.produto], OPCOES[p.modo][0]) * 12 }))
-    .sort((a, b) => b.ano - a.ano);
-  const exAno = ex.reduce((t, x) => t + x.ano, 0);
-  $('ex-4').textContent = brl(exAno * 4);
-  $('ex-ano').textContent = `· ${brl(exAno)} por ano`;
-  $('ex-lista').innerHTML = ex.map((x) => `<div><span>${bonito(x.p.produto)}</span><b>${brl(x.ano)}/ano</b></div>`).join('');
   for (const el of document.querySelectorAll('.fonte')) el.textContent =`Preços de balcão de ${d.fontes.length} redes de Recife, atualizados em ${d.gerado_em.split('-').reverse().join('/')}.`;
 
   renderChips();
