@@ -115,6 +115,10 @@ const ROTULO = { dia: 'por dia', semana: 'por semana', mes: 'por mês', tri: 'a 
 const OPCOES = { dose: ['dia', 'semana', 'mes'], caixa: ['mes', 'tri'] };
 const PADRAO = { 'ALENDRONATO DE SÓDIO 70MG': 'semana', 'ACETATO DE MEDROXIPROGESTERONA 150MG': 'tri' };
 const APELIDO = { 'HIPERTENSÃO': 'Pressão alta', 'DISLIPIDEMIA': 'Colesterol', 'DIABETES MELLITUS + DOENÇA CARDIOVASCULAR': 'Diabetes + coração' };
+// Singular e plural das unidades que o build.js gera.
+const UNIDADE = { comprimidos: ['comprimido', 'comprimidos'], 'cápsulas': ['cápsula', 'cápsulas'], doses: ['dose', 'doses'], 'caixa/frasco': ['caixa', 'caixas'] };
+// As doenças mais comuns vêm primeiro; as demais seguem em ordem alfabética.
+const PRIMEIRO = ['HIPERTENSÃO', 'DIABETES', 'DIABETES MELLITUS + DOENÇA CARDIOVASCULAR', 'DISLIPIDEMIA'];
 const SITE = 'https://doseubolso.com.br';
 const CHECK = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
 
@@ -141,18 +145,16 @@ function freq(p) {
 }
 
 function itemHTML(i) {
-  const p = produtos[i], s = sel[p.produto], f = freq(p);
-  const preco = p.sem_preco ? 'sem preço coletado' : brl(p.mediana, true) + (p.modo === 'dose' ? ' cada' : ' a caixa');
+  const p = produtos[i], s = sel[p.produto], f = freq(p), [um, varios] = UNIDADE[p.unidade];
+  const preco = p.sem_preco ? 'sem preço coletado' : `${brl(p.mediana, true)} por ${um}`;
   const foto = p.imagem_url ? `<img src="${p.imagem_url}" alt="" loading="lazy">` : '';
   const ctrl = !s ? '' : `<div class="ctrl">
-      <div class="qtd-col">
-        <div class="stepper">
-          <button type="button" data-acao="menos" aria-label="Menos">−</button>
-          <input type="text" inputmode="numeric" data-acao="qtd" value="${s.qtd}" aria-label="Quantidade ${ROTULO[f]}">
-          <button type="button" data-acao="mais" aria-label="Mais">+</button>
-        </div>
-        <select data-acao="per" aria-label="Com que frequência">${OPCOES[p.modo].map((o) => `<option value="${o}"${o === f ? ' selected' : ''}>${ROTULO[o]}</option>`).join('')}</select>
+      <div class="stepper">
+        <button type="button" data-acao="menos" aria-label="Menos">−</button>
+        <input type="text" inputmode="numeric" data-acao="qtd" value="${s.qtd}" aria-label="Quantidade de ${varios} ${ROTULO[f]}">
+        <button type="button" data-acao="mais" aria-label="Mais">+</button>
       </div>
+      <select data-acao="per" aria-label="Com que frequência">${OPCOES[p.modo].map((o) => `<option value="${o}"${o === f ? ' selected' : ''}>${varios} ${ROTULO[o]}</option>`).join('')}</select>
       <span class="mes">no balcão<br><b>${brl(mensal(p, 'mediana', s.qtd, f), true)}/mês</b></span>
     </div>`;
   return `<div class="item${s ? ' marcado' : ''}" data-i="${i}">
@@ -337,10 +339,12 @@ $('chips').addEventListener('click', (e) => {
   const b = e.target.closest('[data-chip]');
   if (!b) return;
   chip = b.dataset.chip;
+  $('busca').value = '';
   renderChips();
   render();
 });
-$('busca').addEventListener('input', render);
+// Busca e filtro não se somam: buscar procura em todas as doenças, e escolher um filtro limpa a busca.
+$('busca').addEventListener('input', () => { chip = 'Todos'; renderChips(); render(); });
 // No celular o resultado é uma tela própria: ao abrir, o total de 4 anos sobe do zero, mais devagar.
 addEventListener('hashchange', () => {
   if (location.hash === '#resultado') { sobe($('r-4'), atual.ano * 4, 0, 1800); }
@@ -348,7 +352,8 @@ addEventListener('hashchange', () => {
 $('r-outra').addEventListener('click', () => { sel = {}; render(); resumo(); });
 
 fetch('precos.json').then((r) => r.json()).then((d) => {
-  produtos = d.produtos;
+  const ordem = (p) => PRIMEIRO.includes(p.indicacao) ? PRIMEIRO.indexOf(p.indicacao) : PRIMEIRO.length;
+  produtos = d.produtos.sort((a, b) => ordem(a) - ordem(b));
   // Descarta seleções salvas de remédios que saíram da lista ou ficaram sem preço.
   for (const k in sel) {
     if (!produtos.some((p) => p.produto === k && !p.sem_preco)) delete sel[k];
