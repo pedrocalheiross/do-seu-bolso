@@ -40,7 +40,7 @@
     <div class="cartao">
       <p class="destaque">Só um candidato a presidente se compromete a manter a Farmácia Popular como está.</p>
       <p>Foi no governo Lula e Alckmin que todos os remédios do programa passaram a ser de graça.</p>
-      <p>No governo Bolsonaro, a lista de remédios era menor, e a proposta de orçamento para 2023 cortou 59% da verba do programa.</p>
+      <p>No governo Bolsonaro, a lista de remédios era menor e a proposta de orçamento para 2023 cortou 59% da verba do programa.</p>
       <strong>Vote consciente!</strong>
     </div>
   </section>
@@ -205,7 +205,7 @@ function resumo() {
   try { localStorage.setItem('sel', JSON.stringify(sel)); } catch {}
   const itens = produtos.filter((p) => sel[p.produto]).map((p) => {
     const q = sel[p.produto].qtd, f = freq(p);
-    return { p, uso: `${q} ${ROTULO[f]}`, ano: mensal(p, 'mediana', q, f) * 12, max: mensal(p, 'max', q, f) * 12 };
+    return { p, uso: `${q} ${UNIDADE[p.unidade][q === 1 ? 0 : 1]} ${ROTULO[f]}`, ano: mensal(p, 'mediana', q, f) * 12, max: mensal(p, 'max', q, f) * 12 };
   }).sort((a, b) => b.ano - a.ano);
   const ano = itens.reduce((t, x) => t + x.ano, 0);
   const max = itens.reduce((t, x) => t + x.max, 0);
