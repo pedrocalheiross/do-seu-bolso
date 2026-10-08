@@ -182,10 +182,10 @@ function trocar(el, foco) {
   novo.querySelector(`[data-acao="${foco}"]`)?.focus();
 }
 
-// Os números do resultado sobem do valor que está na tela até o novo.
-function sobe(el, fim, de = el.mostrado || 0) {
+// O total de 4 anos sobe do valor que está na tela até o novo.
+function sobe(el, fim, de = el.mostrado || 0, ms = 900) {
   cancelAnimationFrame(el.quadro);
-  const t0 = performance.now(), dur = matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 900;
+  const t0 = performance.now(), dur = matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : ms;
   const passo = () => {
     const k = dur ? Math.min(1, (performance.now() - t0) / dur) : 1;
     el.mostrado = de + (fim - de) * (1 - (1 - k) ** 3);
@@ -204,16 +204,15 @@ function resumo() {
   }).sort((a, b) => b.ano - a.ano);
   const ano = itens.reduce((t, x) => t + x.ano, 0);
   const max = itens.reduce((t, x) => t + x.max, 0);
-  const maior = itens[0]?.ano || 1;
 
   sobe($('r-4'), ano * 4);
-  sobe($('r-ano'), ano);
+  $('r-ano').textContent = brl(ano);
   $('r-mes').textContent = `${brl(ano / 12)} por mês`;
   $('r-max').hidden = max <= ano;
   $('r-max').innerHTML = `Comprando a marca mais cara, pode passar de <b>${brl(max * 4)}</b>.`;
   $('r-por').innerHTML = itens.length ? itens.map((x) => `<div>
       <div class="linha"><span>${bonito(x.p.produto)}</span><span>${brl(x.ano)}</span></div>
-      <div class="trilho"><div style="width: ${Math.max(2, x.ano / maior * 100)}%"></div></div>
+      <div class="trilho"><div style="width: ${Math.max(2, x.ano / (ano || 1) * 100)}%"></div></div>
       <span class="uso">${x.uso}</span></div>`).join('') : '<p>Marque um remédio para ver o cálculo.</p>';
   $('r-comp').hidden = !itens.length;
   atual = { itens, ano };
@@ -225,14 +224,14 @@ function resumo() {
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>`;
 }
 
-const mensagem = () => `Sem a Farmácia Popular, meus remédios custariam ${brl(atual.ano * 4)} em 4 anos no balcão da farmácia. Vote consciente! Calcule o seu: ${SITE}`;
+const mensagem = () => `Hoje pego meus remédios de graça na Farmácia Popular. Sem ela, eu pagaria ${brl(atual.ano * 4)} em 4 anos, o tempo de um mandato. Vote consciente! Quanto sairia do seu bolso? ${SITE}`;
 
 // Desenha o resultado como um comprovante (PNG). Síncrono para não perder o toque exigido pelo navigator.share.
 function comprovante() {
   const { itens, ano } = atual;
   const linhas = itens.slice(0, 8), resto = itens.length - linhas.length;
   const W = 1080, X0 = 120, X1 = 960, TOPO = 240;
-  const H = TOPO + 756 + (linhas.length + (resto ? 1 : 0)) * 86 + 140;
+  const H = TOPO + 820 +(linhas.length + (resto ? 1 : 0)) * 86 + 140;
   const c = document.createElement('canvas');
   c.width = W; c.height = H;
   const g = c.getContext('2d');
@@ -251,7 +250,11 @@ function comprovante() {
   txt('Meus remédios custariam, no balcão:', X0, y += 56, `400 34px ${NUN}`, '#1d1d1f');
   txt(brl(ano * 4), X0, y += 140, `800 136px ${BAL}`, '#B5121B');
   txt('em 4 anos', X0, y += 50, `700 32px ${NUN}`, '#1d1d1f');
-  tracejado(y += 44);
+  g.fillStyle = '#E8F5EA'; g.strokeStyle = '#b8dfbe'; g.lineWidth = 3;
+  g.beginPath(); g.roundRect(X0, y += 36, X1 - X0, 88, 20); g.fill(); g.stroke();
+  txt('Com a Farmácia Popular', X0 + 32, y + 56, `800 34px ${NUN}`, '#1f6b2b');
+  txt('R$ 0', X1 - 32, y + 60, `800 48px ${BAL}`, '#1f6b2b', 'right');
+  tracejado(y += 88 + 40);
   y += 16;
   for (const x of linhas) {
     g.font = `700 30px ${NUN}`;
@@ -265,8 +268,6 @@ function comprovante() {
   txt('Por ano', X0, y += 66, `700 32px ${NUN}`, '#1d1d1f');
   txt(brl(ano), X1, y, `800 36px ${NUN}`, '#1d1d1f', 'right');
   txt(`${brl(ano / 12)} por mês`, X0, y += 34, `400 24px ${NUN}`, '#5a5a5a');
-  txt('Com a Farmácia Popular', X0, y += 56, `800 32px ${NUN}`, '#1f6b2b');
-  txt('R$ 0', X1, y, `800 36px ${NUN}`, '#1f6b2b', 'right');
   g.fillStyle = '#C8161D'; g.beginPath(); g.roundRect(X0, y += 40, X1 - X0, 96, 24); g.fill();
   txt('VOTE CONSCIENTE!', W / 2, y + 68, `800 56px ${BAL}`, '#FFD21F', 'center');
   txt('Calcule o seu: doseubolso.com.br', W / 2, H - 58, `800 36px ${NUN}`, '#fff', 'center');
@@ -340,9 +341,9 @@ $('chips').addEventListener('click', (e) => {
   render();
 });
 $('busca').addEventListener('input', render);
-// No celular o resultado é uma tela própria: ao abrir, os números sobem do zero.
+// No celular o resultado é uma tela própria: ao abrir, o total de 4 anos sobe do zero, mais devagar.
 addEventListener('hashchange', () => {
-  if (location.hash === '#resultado') { sobe($('r-4'), atual.ano * 4, 0); sobe($('r-ano'), atual.ano, 0); }
+  if (location.hash === '#resultado') { sobe($('r-4'), atual.ano * 4, 0, 1800); }
 });
 $('r-outra').addEventListener('click', () => { sel = {}; render(); resumo(); });
 
