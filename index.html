@@ -6,7 +6,7 @@
     <title>Do Seu Bolso — quanto a Farmácia Popular economiza para você</title>
     <meta
       name="description"
-      content="Sem Farmácia Popular, quanto vai sair do seu bolso? Marque seus remédios e veja quanto pagaria no balcão da farmácia."
+      content="Sem Farmácia Popular, quanto vai sair do seu bolso? Descubra quanto custariam os remédios que você recebe gratuitamente."
     />
     <meta
       property="og:title"
@@ -14,7 +14,7 @@
     />
     <meta
       property="og:description"
-      content="Marque seus remédios e veja quanto pagaria no balcão da farmácia."
+      content="Descubra quanto custariam os remédios que você recebe gratuitamente."
     />
     <meta
       property="og:image"
@@ -55,9 +55,8 @@
         <div class="hero-texto">
           <h1>Sem Farmácia Popular, quanto vai sair do seu bolso?</h1>
           <p>
-            Marque os remédios que você pega <b>de graça</b> hoje
-            <b>com a Farmácia Popular</b>. A gente mostra quanto você pagaria no
-            balcão da farmácia.
+            Descubra quanto custariam os remédios que você recebe
+            <b>gratuitamente</b> hoje <b>com a Farmácia Popular</b>.
           </p>
           <div class="cta">
             <a class="btn" href="#calculadora"
@@ -88,7 +87,7 @@
             passaram a ser de graça.
           </p>
           <p>
-            No governo Bolsonaro, a lista de remédios era menor, e a proposta de
+            No governo Bolsonaro, a lista de remédios era menor e a proposta de
             orçamento para 2023 cortou 59% da verba do programa.
           </p>
           <strong>Vote consciente!</strong>
@@ -363,7 +362,7 @@
         <button type="button" data-acao="mais" aria-label="Mais">+</button>
       </div>
       <select data-acao="per" aria-label="Com que frequência">${OPCOES[p.modo].map((o) => `<option value="${o}"${o === f ? " selected" : ""}>${varios} ${ROTULO[o]}</option>`).join("")}</select>
-      <span class="mes">no balcão<br><b>${brl(mensal(p, "mediana", s.qtd, f), true)}/mês</b></span>
+      <span class="mes">custaria<br><b>${brl(mensal(p, "mediana", s.qtd, f), true)}/mês</b></span>
     </div>`;
         return `<div class="item${s ? " marcado" : ""}" data-i="${i}">
     <button type="button" class="toggle" data-acao="toggle" aria-pressed="${!!s}"${p.sem_preco ? " disabled" : ""}>
@@ -434,7 +433,7 @@
               f = freq(p);
             return {
               p,
-              uso: `${q} ${ROTULO[f]}`,
+              uso: `${q} ${UNIDADE[p.unidade][q === 1 ? 0 : 1]} ${ROTULO[f]}`,
               ano: mensal(p, "mediana", q, f) * 12,
               max: mensal(p, "max", q, f) * 12,
             };
@@ -533,7 +532,7 @@
           "#B5121B",
         );
         txt(
-          "Meus remédios custariam, no balcão:",
+          "Os remédios que recebo de graça custariam:",
           X0,
           (y += 56),
           `400 34px ${NUN}`,
@@ -737,7 +736,7 @@
           }
 
           for (const el of document.querySelectorAll(".fonte"))
-            el.textContent = `Preços de balcão de ${d.fontes.length} redes de Recife, atualizados em ${d.gerado_em.split("-").reverse().join("/")}.`;
+            el.textContent = `Preços de ${d.fontes.length} redes de farmácia de Recife, atualizados em ${d.gerado_em.split("-").reverse().join("/")}.`;
 
           renderChips();
           render();
