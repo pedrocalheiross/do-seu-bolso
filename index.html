@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Do Seu Bolso — quanto a Farmácia Popular economiza para você</title>
-<meta name="description" content="Sem Farmácia Popular, quanto vai sair do seu bolso? Marque seus remédios e veja quanto pagaria no balcão da farmácia.">
+<meta name="description" content="Sem Farmácia Popular, quanto vai sair do seu bolso? Descubra quanto custariam os remédios que você recebe gratuitamente.">
 <meta property="og:title" content="Sem Farmácia Popular, quanto vai sair do seu bolso?">
-<meta property="og:description" content="Marque seus remédios e veja quanto pagaria no balcão da farmácia.">
+<meta property="og:description" content="Descubra quanto custariam os remédios que você recebe gratuitamente.">
 <meta property="og:image" content="https://doseubolso.com.br/compartilhar.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -30,7 +30,7 @@
   <section class="wrap hero">
     <div class="hero-texto">
       <h1>Sem Farmácia Popular, quanto vai sair do seu bolso?</h1>
-      <p>Marque os remédios que você pega <b>de graça</b> hoje <b>com a Farmácia Popular</b>. A gente mostra quanto você pagaria no balcão da farmácia.</p>
+      <p>Descubra quanto custariam os remédios que você recebe <b>gratuitamente</b> hoje <b>com a Farmácia Popular</b>.</p>
       <div class="cta">
         <a class="btn" href="#calculadora">Calcular o meu gasto
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -97,7 +97,7 @@
     </div>
     <a class="borda so-cel" id="r-outra" href="#calculadora">Calcular novamente</a>
     <a class="link so-pc" href="termos.html">Como calculamos</a>
-    <p class="nota so-cel"><span class="fonte">Valores estimados com preços de balcão em Recife.</span> <a href="termos.html">Como calculamos e termos de uso</a></p>
+    <p class="nota so-cel"><span class="fonte">Valores estimados com preços das farmácias de Recife.</span> <a href="termos.html">Como calculamos e termos de uso</a></p>
   </aside>
 </main>
 
@@ -158,7 +158,7 @@ function itemHTML(i) {
         <button type="button" data-acao="mais" aria-label="Mais">+</button>
       </div>
       <select data-acao="per" aria-label="Com que frequência">${OPCOES[p.modo].map((o) => `<option value="${o}"${o === f ? ' selected' : ''}>${varios} ${ROTULO[o]}</option>`).join('')}</select>
-      <span class="mes">no balcão<br><b>${brl(mensal(p, 'mediana', s.qtd, f), true)}/mês</b></span>
+      <span class="mes">custaria<br><b>${brl(mensal(p, 'mediana', s.qtd, f), true)}/mês</b></span>
     </div>`;
   return `<div class="item${s ? ' marcado' : ''}" data-i="${i}">
     <button type="button" class="toggle" data-acao="toggle" aria-pressed="${!!s}"${p.sem_preco ? ' disabled' : ''}>
@@ -252,7 +252,7 @@ function comprovante() {
 
   let y = TOPO + 90;
   txt('COMPROVANTE · SEM FARMÁCIA POPULAR', X0, y, `800 26px ${NUN}`, '#B5121B');
-  txt('Meus remédios custariam, no balcão:', X0, y += 56, `400 34px ${NUN}`, '#1d1d1f');
+  txt('Os remédios que recebo de graça custariam:', X0, y += 56, `400 34px ${NUN}`, '#1d1d1f');
   txt(brl(ano * 4), X0, y += 140, `800 136px ${BAL}`, '#B5121B');
   txt('em 4 anos', X0, y += 50, `700 32px ${NUN}`, '#1d1d1f');
   g.fillStyle = '#E8F5EA'; g.strokeStyle = '#b8dfbe'; g.lineWidth = 3;
@@ -363,7 +363,7 @@ fetch('precos.json').then((r) => r.json()).then((d) => {
     else sel[k].qtd = Math.min(999, +sel[k].qtd || 0);
   }
 
-  for (const el of document.querySelectorAll('.fonte')) el.textContent =`Preços de balcão de ${d.fontes.length} redes de Recife, atualizados em ${d.gerado_em.split('-').reverse().join('/')}.`;
+  for (const el of document.querySelectorAll('.fonte')) el.textContent =`Preços de ${d.fontes.length} redes de farmácia de Recife, atualizados em ${d.gerado_em.split('-').reverse().join('/')}.`;
 
   renderChips();
   render();
