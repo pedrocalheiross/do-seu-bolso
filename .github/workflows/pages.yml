@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       # Arquivo novo do site precisa entrar nesta lista.
-      - run: mkdir _site && cp index.html termos.html estilo.css precos.json favicon.png logo.png compartilhar.png CNAME _site/
+      - run: mkdir _site && cp index.html termos.html estilo.css precos.json favicon.png logo.png compartilhar.png CNAME _site/ && cp -R imagens _site/
       - uses: actions/upload-pages-artifact@v3
       - id: deploy
         uses: actions/deploy-pages@v4

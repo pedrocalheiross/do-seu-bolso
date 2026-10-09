@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-07",
+ "gerado_em": "2026-10-09",
  "fontes": [
   {
    "farmacia": "droga-raia-recife",
@@ -7,11 +7,11 @@
   },
   {
    "farmacia": "drogaria-sao-paulo-recife",
-   "nota": "Coletado em 2026-10-06 no site da Drogaria São Paulo, com preço confirmado para o CEP 50030-230 (Cais do Apolo, Recife - PE)."
+   "nota": "Coletado em 2026-10-06 no site da Drogaria São Paulo, com preço confirmado para o CEP 50030-230 (Cais do Apolo, Recife - PE). Fralda geriátrica e absorvente higiênico coletados em 2026-10-08. Maleato de timolol 2,5 mg: preço anunciado no site em 2026-10-08."
   },
   {
    "farmacia": "drogarias-pacheco-recife",
-   "nota": "Coletado em 2026-10-06 no site da Drogarias Pacheco, com preço confirmado para o CEP 50030-230 (Cais do Apolo, Recife - PE)."
+   "nota": "Coletado em 2026-10-06 no site da Drogarias Pacheco, com preço confirmado para o CEP 50030-230 (Cais do Apolo, Recife - PE). Fralda geriátrica e absorvente higiênico coletados em 2026-10-08. Maleato de timolol 2,5 mg: preço anunciado no site em 2026-10-08."
   },
   {
    "farmacia": "drogasil-recife",
@@ -19,26 +19,26 @@
   },
   {
    "farmacia": "extrafarma-recife",
-   "nota": "Coletado em 2026-10-06 no site da Extrafarma, com preço confirmado para o CEP 50030-230 (Cais do Apolo, Recife - PE)."
+   "nota": "Coletado em 2026-10-06 no site da Extrafarma, com preço confirmado para o CEP 50030-230 (Cais do Apolo, Recife - PE). Fralda geriátrica e absorvente higiênico coletados em 2026-10-08. Maleato de timolol 2,5 mg: preço anunciado no site em 2026-10-08."
   },
   {
    "farmacia": "farmacia-permanente-recife",
-   "nota": "Coletado em 2026-10-06 no site da Farmácia Permanente. O preço é o de Pernambuco (uf=PE), estado de Recife."
+   "nota": "Coletado em 2026-10-06 no site da Farmácia Permanente. O preço é o de Pernambuco (uf=PE), estado de Recife. Fralda geriátrica e absorvente higiênico coletados em 2026-10-08."
   },
   {
    "farmacia": "farmacias-independente-recife",
-   "nota": "Coletado em 2026-10-06 no site das Farmácias Independente. O preço é o de Pernambuco (uf=PE), estado de Recife."
+   "nota": "Coletado em 2026-10-06 no site das Farmácias Independente. O preço é o de Pernambuco (uf=PE), estado de Recife. Fralda geriátrica e absorvente higiênico coletados em 2026-10-08. Maleato de timolol 2,5 mg: preço anunciado no site em 2026-10-08."
   },
   {
    "farmacia": "pague-menos-recife",
-   "nota": "Coletado em 2026-10-06 no site da Pague Menos, com preço confirmado para o CEP 50030-230 (Cais do Apolo, Recife - PE)."
+   "nota": "Coletado em 2026-10-06 no site da Pague Menos, com preço confirmado para o CEP 50030-230 (Cais do Apolo, Recife - PE). Fralda geriátrica e absorvente higiênico coletados em 2026-10-08. Maleato de timolol 2,5 mg: preço anunciado no site em 2026-10-08."
   }
  ],
  "produtos": [
   {
    "produto": "ACETATO DE MEDROXIPROGESTERONA 150MG",
    "indicacao": "ANTICONCEPÇÃO",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/454579/378054---demedrox-150mgml-suspensao-injetavel-1-ampola.jpg?v=638298014924000000",
+   "imagem_url": "imagens/454579.jpg",
    "modo": "caixa",
    "unidade": "caixa/frasco",
    "min": 26.45,
@@ -48,7 +48,7 @@
   {
    "produto": "ETINILESTRADIOL 0,03MG + LEVONORGESTREL 0,15MG - 3 CARTELAS COM 21 COMPRIMIDOS",
    "indicacao": "ANTICONCEPÇÃO",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/458667/715751---microvlar-0-15mg-0-03mg-bayer-63-drageas.jpg?v=638298017683370000",
+   "imagem_url": "imagens/458667.jpg",
    "modo": "caixa",
    "unidade": "caixa/frasco",
    "min": 24.69,
@@ -58,7 +58,7 @@
   {
    "produto": "ETINILESTRADIOL 0,03MG + LEVONORGESTREL 0,15MG - CARTELA COM 21 COMPRIMIDOS",
    "indicacao": "ANTICONCEPÇÃO",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/450557/642045---gestrelan-0-15mg-biolab-21-comprimidos.jpg?v=638962156735900000",
+   "imagem_url": "imagens/450557.jpg",
    "modo": "caixa",
    "unidade": "caixa/frasco",
    "min": 4.19,
@@ -68,7 +68,7 @@
   {
    "produto": "NORETISTERONA 0,35MG",
    "indicacao": "ANTICONCEPÇÃO",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/459864/712620---noretisterona-0-35mg-generico-biolab-35-comprimidos.jpg?v=638298017215630000",
+   "imagem_url": "imagens/459864.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 0.2626,
@@ -78,7 +78,7 @@
   {
    "produto": "VALERATO DE ESTRADIOL 5MG + ENANTATO DE NORETISTERONA 50MG",
    "indicacao": "ANTICONCEPÇÃO",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/1303850/897558-1.jpg?v=638923505791970000",
+   "imagem_url": "imagens/1303850.jpg",
    "modo": "caixa",
    "unidade": "caixa/frasco",
    "min": 19.39,
@@ -88,7 +88,7 @@
   {
    "produto": "BROMETO DE IPRATRÓPIO 0,02MG",
    "indicacao": "ASMA",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/957273/de-referencia-tarja-vermelha-em-aerosol-sao-paulo.jpg?v=638298011818100000",
+   "imagem_url": "imagens/957273.jpg",
    "modo": "caixa",
    "unidade": "caixa/frasco",
    "min": 36.25,
@@ -98,7 +98,7 @@
   {
    "produto": "BROMETO DE IPRATRÓPIO 0,25MG",
    "indicacao": "ASMA",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/957535/genericos-tarja-vermelha-em-solucao-sao-paulo.jpg?v=638298012461330000",
+   "imagem_url": "imagens/957535.jpg",
    "modo": "caixa",
    "unidade": "caixa/frasco",
    "min": 9.69,
@@ -108,7 +108,7 @@
   {
    "produto": "DIPROPIONATO DE BECLOMETASONA 200MCG",
    "indicacao": "ASMA",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/1856609/801020---DIP-BECLOME-200MG-1.jpg?v=639114515329700000",
+   "imagem_url": "imagens/1856609.jpg",
    "modo": "dose",
    "unidade": "doses",
    "min": 0.2064,
@@ -118,7 +118,7 @@
   {
    "produto": "DIPROPIONATO DE BECLOMETASONA 250MCG",
    "indicacao": "ASMA",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/1856611/696560---DIP-BECLOMETASONA-200D-1.jpg?v=639114516596270000",
+   "imagem_url": "imagens/1856611.jpg",
    "modo": "dose",
    "unidade": "doses",
    "min": 0.2289,
@@ -128,7 +128,7 @@
   {
    "produto": "DIPROPIONATO DE BECLOMETASONA 50MCG",
    "indicacao": "ASMA",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/1856610/801640---DIP-DE-BECLOM-50MCG-1.jpg?v=639114515910970000",
+   "imagem_url": "imagens/1856610.jpg",
    "modo": "dose",
    "unidade": "doses",
    "min": 0.1265,
@@ -138,7 +138,7 @@
   {
    "produto": "SULFATO DE SALBUTAMOL 100MCG",
    "indicacao": "ASMA",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/2219845/749095---Sulfato-de-Salbutamol-100mcg-Glenmark-1-Frasco-com-19ml--Dispositivo-Inalatorio-1.jpg?v=639269221680870000",
+   "imagem_url": "imagens/2219845.jpg",
    "modo": "dose",
    "unidade": "doses",
    "min": 0.075,
@@ -148,7 +148,7 @@
   {
    "produto": "SULFATO DE SALBUTAMOL 5MG",
    "indicacao": "ASMA",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/954588/de-referencia-tarja-vermelha-em-gota-sao-paulo.jpg?v=638298008530600000",
+   "imagem_url": "imagens/954588.jpg",
    "modo": "caixa",
    "unidade": "caixa/frasco",
    "min": 21.16,
@@ -158,7 +158,7 @@
   {
    "produto": "CLORIDRATO DE METFORMINA 500MG",
    "indicacao": "DIABETES",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/456722/521434---metformina-500mg-generico-30-capsulas.jpg?v=638298015324000000",
+   "imagem_url": "imagens/456722.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 0.1518,
@@ -168,7 +168,7 @@
   {
    "produto": "CLORIDRATO DE METFORMINA 500MG - AÇÃO PROLONGADA",
    "indicacao": "DIABETES",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/456722/521434---metformina-500mg-generico-30-capsulas.jpg?v=638298015324000000",
+   "imagem_url": "imagens/456722.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 0.2248,
@@ -178,7 +178,7 @@
   {
    "produto": "CLORIDRATO DE METFORMINA 850MG",
    "indicacao": "DIABETES",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/458347/686409---glifage-xr-850mg-merck-30-comprimidos.jpg?v=638942304354900000",
+   "imagem_url": "imagens/458347.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 0.172,
@@ -188,7 +188,7 @@
   {
    "produto": "GLIBENCLAMIDA 5MG",
    "indicacao": "DIABETES",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/450655/646075---giblenclamida-5mg-cimed-30-comprimidos.jpg?v=638298016222200000",
+   "imagem_url": "imagens/450655.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 0.0997,
@@ -198,7 +198,7 @@
   {
    "produto": "INSULINA HUMANA 100UI/ML",
    "indicacao": "DIABETES",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/1255315/5223---Insulina-Novolin-N-NPH-Penfill-100UIml--1.jpg?v=638942355951800000",
+   "imagem_url": "imagens/1255315.jpg",
    "modo": "caixa",
    "unidade": "caixa/frasco",
    "min": 28.9,
@@ -208,7 +208,7 @@
   {
    "produto": "INSULINA HUMANA REGULAR 100UI/ML",
    "indicacao": "DIABETES",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/953675/de-referencia-tarja-vermelha-injetavel-sao-paulo.jpg?v=638298007714800000",
+   "imagem_url": "imagens/953675.jpg",
    "modo": "caixa",
    "unidade": "caixa/frasco",
    "min": 43.16,
@@ -218,7 +218,7 @@
   {
    "produto": "DAPAGLIFLOZINA 10 MG",
    "indicacao": "DIABETES MELLITUS + DOENÇA CARDIOVASCULAR",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/1302302/898350---Dapagliflozina-10mg-Generico-Medquimica-30-Comprimidos-1.jpg?v=638919997436000000",
+   "imagem_url": "imagens/1302302.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 2.2143,
@@ -228,15 +228,17 @@
   {
    "produto": "ABSORVENTE HIGIÊNICO",
    "indicacao": "DIGNIDADE MENSTRUAL",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/1182627/865117---Absorvente-Geriatrico-Ever-Care-Unissex-Incontinencia-Intenso-20-Unidades_0000_0.png.png?v=638682260379570000",
-   "modo": "caixa",
-   "unidade": "caixa/frasco",
-   "sem_preco": true
+   "imagem_url": "imagens/1495265.jpg",
+   "modo": "dose",
+   "unidade": "unidades",
+   "min": 0.2999,
+   "mediana": 0.8063,
+   "max": 4.499
   },
   {
    "produto": "SINVASTATINA 10MG",
    "indicacao": "DISLIPIDEMIA",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/456042/579505---vytorin-10mg20mg-30-comprimidos.jpg?v=638298015944030000",
+   "imagem_url": "imagens/456042.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 0.1787,
@@ -246,7 +248,7 @@
   {
    "produto": "SINVASTATINA 20MG",
    "indicacao": "DISLIPIDEMIA",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/470208/646156---sinvastatina-20mg-generico-cimed-30-comprimidos.jpg?v=638972730876100000",
+   "imagem_url": "imagens/470208.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 0.1243,
@@ -256,7 +258,7 @@
   {
    "produto": "SINVASTATINA 40MG",
    "indicacao": "DISLIPIDEMIA",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/454805/646237---sinvastatina-40mg-generico-cimed-30-comprimidos.jpg?v=638298016212170000",
+   "imagem_url": "imagens/454805.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 0.2997,
@@ -266,7 +268,7 @@
   {
    "produto": "CARBIDOPA 25MG + LEVODOPA 250MG",
    "indicacao": "DOENÇA DE PARKINSON",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/1200466/881244---Carbidopa-25mg-Levodopa-250mg-Generico-Zydus-30-Comprimidos-1.jpg.jpg?v=638755760891200000",
+   "imagem_url": "imagens/1200466.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 0.7163,
@@ -276,7 +278,7 @@
   {
    "produto": "CLORIDRATO DE BENSERAZIDA 25MG + LEVODOPA 100MG",
    "indicacao": "DOENÇA DE PARKINSON",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/458562/692611---ekson-100mg-25mg-ache-30-comprimidos.jpg?v=638298017266130000",
+   "imagem_url": "imagens/458562.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 1.453,
@@ -286,15 +288,17 @@
   {
    "produto": "MALEATO DE TIMOLOL 2,5MG",
    "indicacao": "GLAUCOMA",
-   "imagem_url": "https://paguemenos.vtexassets.com/arquivos/ids/1084967/GENERICO%20TARJA%20VERMELHA.jpg?v=638963941657930000",
+   "imagem_url": "imagens/1084967.jpg",
    "modo": "caixa",
    "unidade": "caixa/frasco",
-   "sem_preco": true
+   "min": 5.29,
+   "mediana": 6.51,
+   "max": 8.24
   },
   {
    "produto": "MALEATO DE TIMOLOL 5MG",
    "indicacao": "GLAUCOMA",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/958981/genericos-tarja-vermelha-em-solucao-sao-paulo.jpg?v=638298015347830000",
+   "imagem_url": "imagens/958981.jpg",
    "modo": "caixa",
    "unidade": "caixa/frasco",
    "min": 7.59,
@@ -304,7 +308,7 @@
   {
    "produto": "ATENOLOL 25MG",
    "indicacao": "HIPERTENSÃO",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/455549/603325---atenolol-clortalidona-100mg25mg-generico-eurofarma-30-comprimidos.jpg?v=638298015934470000",
+   "imagem_url": "imagens/455549.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 0.0663,
@@ -314,7 +318,7 @@
   {
    "produto": "BESILATO DE ANLODIPINO 5 MG",
    "indicacao": "HIPERTENSÃO",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/455587/563013---besilato-de-anlodipino-5mg-generico-neo-quimica-30-comprimidos.jpg?v=638298015882400000",
+   "imagem_url": "imagens/455587.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 0.0713,
@@ -324,7 +328,7 @@
   {
    "produto": "CAPTOPRIL 25MG",
    "indicacao": "HIPERTENSÃO",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/450652/646040---captopril-25mg-generico-cimed-30-comprimidos.jpg?v=638298016183270000",
+   "imagem_url": "imagens/450652.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 0.09,
@@ -334,7 +338,7 @@
   {
    "produto": "CLORIDRATO DE PROPRANOLOL 40MG",
    "indicacao": "HIPERTENSÃO",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/923562/815225---Cloridrato-de-Propranolol-40mg-Generico-Pharlab-30-Comprimidos.jpg?v=638300380248230000",
+   "imagem_url": "imagens/923562.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 0.106,
@@ -344,7 +348,7 @@
   {
    "produto": "ESPIRONOLACTONA 25 MG",
    "indicacao": "HIPERTENSÃO",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/947008/VSPM-G.jpg?v=638298019076770000",
+   "imagem_url": "imagens/947008.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 0.3967,
@@ -354,7 +358,7 @@
   {
    "produto": "FUROSEMIDA 40 MG",
    "indicacao": "HIPERTENSÃO",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/453948/603503---furosemida-40mg-generico-neo-quimica-30-comprimidos.jpg?v=638298016176200000",
+   "imagem_url": "imagens/453948.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 0.2495,
@@ -364,7 +368,7 @@
   {
    "produto": "HIDROCLOROTIAZIDA 25MG",
    "indicacao": "HIPERTENSÃO",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/931050/VSPM-G.jpg?v=638300380232130000",
+   "imagem_url": "imagens/931050.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 0.0637,
@@ -374,7 +378,7 @@
   {
    "produto": "LOSARTANA POTÁSSICA 50MG",
    "indicacao": "HIPERTENSÃO",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/455858/196991---losartana-potassica-50mg-generico-ems-30-comprimidos.jpg?v=639234616079070000",
+   "imagem_url": "imagens/455858.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 0.1197,
@@ -384,7 +388,7 @@
   {
    "produto": "MALEATO DE ENALAPRIL 10MG",
    "indicacao": "HIPERTENSÃO",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/450658/646270---maleato-de-enalapril-10mg-generico-cimed-30-comprimidos.jpg?v=638298016207170000",
+   "imagem_url": "imagens/450658.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 0.1047,
@@ -394,7 +398,7 @@
   {
    "produto": "SUCCINATO DE METOPROLOL 25 MG",
    "indicacao": "HIPERTENSÃO",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/455331/647284---metoprolol-25mg-generico-neo-quimica-30-comprimidos-revestidos.jpg?v=639106597317270000",
+   "imagem_url": "imagens/455331.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 0.5097,
@@ -404,15 +408,17 @@
   {
    "produto": "FRALDA GERIÁTRICA",
    "indicacao": "INCONTINÊNCIA URINÁRIA",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/1091517/781649---Fralda-Geriatrica-Ever-Care-Descartavel-EG-7-Unidades_0000_EAN_7908271303437-FR-ADULT-EVER-CARE-EG7-SKU_781649.png?v=638503557429300000",
-   "modo": "caixa",
-   "unidade": "caixa/frasco",
-   "sem_preco": true
+   "imagem_url": "imagens/1091517.png",
+   "modo": "dose",
+   "unidade": "unidades",
+   "min": 1.5444,
+   "mediana": 4.214,
+   "max": 6.9986
   },
   {
    "produto": "ALENDRONATO DE SÓDIO 70MG",
    "indicacao": "OSTEOPOROSE",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/453944/603473---alendronato-sodico-70mg-generico-neo-quimica-4-comprimidos.jpg?v=638298016181870000",
+   "imagem_url": "imagens/453944.jpg",
    "modo": "dose",
    "unidade": "comprimidos",
    "min": 1.9975,
@@ -422,7 +428,7 @@
   {
    "produto": "BUDESONIDA 32MCG",
    "indicacao": "RINITE",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/455171/649058---budesonida-32mcg-generico-ems-120-doses-spray-nasal.jpg?v=638298016717500000",
+   "imagem_url": "imagens/455171.jpg",
    "modo": "dose",
    "unidade": "doses",
    "min": 0.1832,
@@ -432,7 +438,7 @@
   {
    "produto": "BUDESONIDA 50MCG",
    "indicacao": "RINITE",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/955814/de-referencia-tarja-vermelha-em-xarope-sao-paulo.jpg?v=638298007711700000",
+   "imagem_url": "imagens/955814.jpg",
    "modo": "dose",
    "unidade": "doses",
    "min": 0.2883,
@@ -442,7 +448,7 @@
   {
    "produto": "BUDESONIDA 50MCG - 200 DOSES",
    "indicacao": "RINITE",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/955696/de-referencia-tarja-vermelha-em-spray-sao-paulo.jpg?v=638298009728300000",
+   "imagem_url": "imagens/955696.jpg",
    "modo": "dose",
    "unidade": "doses",
    "min": 0.3297,
@@ -452,7 +458,7 @@
   {
    "produto": "DIPROPIONATO DE BECLOMETASONA 0,05 MG",
    "indicacao": "RINITE",
-   "imagem_url": "https://drogariasp.vtexassets.com/arquivos/ids/954032/de-referencia-tarja-vermelha-em-spray-sao-paulo.jpg?v=638298008167970000",
+   "imagem_url": "imagens/954032.jpg",
    "modo": "dose",
    "unidade": "doses",
    "min": 0.1347,
